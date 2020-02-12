@@ -1,0 +1,31 @@
+body {
+    background-color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar-custom {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.jumbotron {
+    height: 100vh;
+}
+
+.header {
+    position: static;
+    height: 70vh;
+    width: 100%;
+    background-image: url("../img/header-bg.png");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+    padding-top: 30vh !important;
+    margin-bottom: 0px;
+}
+
+.header-content {
+    border-left: 1.5px solid;
+    border-color: white;
+    color: #F9F9F9;
+}
