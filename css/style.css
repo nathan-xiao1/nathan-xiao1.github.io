@@ -1,6 +1,19 @@
+:root {
+    --primary-color:#4878C0;
+    --secondary-color:black;
+}
+
 body {
     background-color: #ffffff;
     font-family: 'Roboto', sans-serif;
+}
+
+.primary-text {
+    color: var(--primary-color);
+}
+
+.secondary-text {
+    color: var(--secondary-color);
 }
 
 .navbar-custom {
@@ -29,3 +42,34 @@ body {
     border-color: white;
     color: #F9F9F9;
 }
+
+section {
+    padding: 20px 0 20px 0 ;
+}
+
+.skill-bar {
+    background-color: var(--primary-color);
+}
+
+.skill-row {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.skill-name {
+    margin-bottom: 4px;
+}
+
+hr {
+    background-color: #CB2D6F;
+    height: 1px;
+    width: 80px;
+    border: 0;
+}
+
+.footer {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #f5f5f5;
+  }
