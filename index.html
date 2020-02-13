@@ -12,7 +12,8 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
 
     <!-- Custom Font -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
@@ -23,24 +24,44 @@
 <body id="main-body">
 
     <!-- Image and Text Navbar -->
-    <nav class="navbar navbar-dark position-absolute w-100 navbar-custom">
-        <div class=container>
+    <nav class="navbar navbar-dark navbar-expand-lg position-absolute w-100 navbar-custom">
+        <div class="container">
             <a class="navbar-brand" href="#">
                 Bootstrap
             </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#home">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#aboutme">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Projects</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <!-- Jumbotron Header -->
-    <div class="jumbotron jumbotron-fluid header m-0">
+    <div class="jumbotron jumbotron-fluid header m-0" id="home">
         <div class="container header-content">
-            <h1 class="display-1 font-weight-bold">Nathan Xiao</h1>
+            <h1 class="display-1 font-weight-bold m-0">Nathan Xiao</h1>
             <p class="lead">Software Engineering student at the University of New South Wales (UNSW)</p>
         </div>
     </div>
 
     <!-- About Me -->
-    <section>
+    <section id="aboutme">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
@@ -68,8 +89,8 @@
         </div>
     </section>
 
-    <!-- Knowledges -->
-    <section class="bg-light section-secondary">
+    <!-- Skills -->
+    <section class="bg-light section-secondary" id="skills">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
@@ -205,7 +226,7 @@
     </section>
 
     <!-- Projects -->
-    <section>
+    <section id="projects">
         <div class="container">
             <div class="row">
                 <div class="col text-center primary-text">
@@ -220,7 +241,19 @@
             </div>
             <div class="row">
                 <div class="col-md-4">
-                    <div class="card">
+                    <div class="card mb-4">
+                        <img src="img/header-bg.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Decision Android App</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the
+                                bulk of the card's content.</p>
+                            <a href="https://github.com/nathan-xiao1/decision-android" class="btn btn-primary">View on
+                                GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
                         <img src="img/header-bg.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
@@ -231,24 +264,49 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card">
+                    <div class="card mb-4">
                         <img src="img/header-bg.png" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                            <h5 class="card-title">Flask Boilderplate</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the
                                 bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="https://github.com/nathan-xiao1/flask-boilerplate" class="btn btn-primary">View on
+                                Github</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card">
+                    <div class="card mb-4">
                         <img src="img/header-bg.png" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the
-                                bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="card-title">2D Dungeon Game</h5>
+                            <p class="card-text">Simple 2D dungeon game with multiple levels. Written in Java using
+                                libraries including JavaFX.</p>
+                            <a href="https://github.com/nathan-xiao1/flask-boilerplate" class="btn btn-primary">View on
+                                Github</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="img/header-bg.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Legit</h5>
+                            <p class="card-text">A subset clone of the version control system Git. Written with Bash and
+                                Perl</p>
+                            <a href="https://github.com/nathan-xiao1/flask-boilerplate" class="btn btn-primary">View on
+                                Github</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="img/header-bg.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Seddit</h5>
+                            <p class="card-text">Reddit clone SPA. Written with Javascript, HTML + CSS. </p>
+                            <a href="https://github.com/nathan-xiao1/flask-boilerplate" class="btn btn-primary">View on
+                                Github</a>
                         </div>
                     </div>
                 </div>
@@ -264,9 +322,8 @@
     </footer>
 
     <!-- Optional JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>

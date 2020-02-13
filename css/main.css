@@ -1,0 +1,25 @@
+:root {
+    --primary-color: #4878C0;
+    --secondary-color: #333333;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.primary-text {
+    color: var(--primary-color);
+}
+
+.secondary-text {
+    color: var(--secondary-color);
+}
+
+.navbar-custom {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+}
