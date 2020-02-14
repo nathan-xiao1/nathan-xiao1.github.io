@@ -22,6 +22,8 @@
     <link rel="stylesheet"
         href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 
+    <!-- Devicons -->
+    <link rel='stylesheet' href='http://cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css'>
 
     <title>Nathan Xiao</title>
 </head>
@@ -29,7 +31,7 @@
 <body id="main-body">
 
     <!-- Image and Text Navbar -->
-    <nav class="navbar navbar-dark navbar-expand-lg position-absolute w-100 navbar-custom">
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top w-100 navbar-custom" id="navbar">
         <div class="container">
             <a class="navbar-brand" href="#">
                 Bootstrap
@@ -44,13 +46,13 @@
                         <a class="nav-link" href="#home">Home<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#aboutme">About Me</a>
+                        <a class="nav-link" href="#experience">Experience</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
+                        <a class="nav-link" href="#education">Education</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#skills">Projects</a>
+                        <a class="nav-link" href="#projects">Projects</a>
                     </li>
                 </ul>
             </div>
@@ -60,24 +62,26 @@
     <!-- Jumbotron Header -->
     <div class="jumbotron jumbotron-fluid header m-0" id="home">
         <div class="container header-content">
-            <h1 class="display-1 font-weight-bold m-0">Nathan Xiao</h1>
+            <h1 class="display-1 font-weight-bold m-0">Nathan Xiaos</h1>
             <p class="lead">Software Engineering student at the University of New South Wales (UNSW)</p>
         </div>
     </div>
 
     <!-- About Me -->
-    <section id="aboutme">
+    <section class="d-none align-items-center" id="aboutme">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6">
+                <div class="col-lg-6 text-center">
                     <div class="p-5">
-                        <img class="img-fluid rounded-circle" src="img/01.jpg" alt="">
+                        <img class="img-responsive rounded-circle" src="img/dummy-profile-pic.jpg" style="width: 70%;">
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="p-5">
                         <h2 class="display-4 mb-4 primary-text">About Me</h2>
                         <p class="secondary-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+                            <!-- class="lead" -->
+                            <!-- class="lead" -->
                             dolor
                             nisl, mollis ut fringilla consectetur, dapibus ut turpis. Cras sed lacinia lacus. Sed quam
                             lorem, dignissim a efficitur ac, vehicula sed elit. Pellentesque aliquet lobortis maximus.
@@ -94,14 +98,13 @@
         </div>
     </section>
 
-    <!-- Skills -->
-    <section class="bg-light section-secondary" id="skills">
+    <!-- Experience -->
+    <section class="d-flex align-items-center" id="experience">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="p-5">
-                        <!-- <h2 class="display-4 m-0 primary-text">Skills</h2> -->
-                        <h2 class="display-4 mb-4 primary-text">Skills</h2>
+                        <h2 class="display-4 mb-4 primary-text">Experience</h2>
                         <p class="secondary-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
                             dolor
                             nisl, mollis ut fringilla consectetur, dapibus ut turpis. Cras sed lacinia lacus. Sed quam
@@ -112,21 +115,31 @@
                             aliquet. Nunc posuere nisl diam, vel varius tellus interdum sed. Donec pharetra augue ut
                             mauris
                             porta, eu faucibus est auctor.
+                            <!-- <i class="devicon-bootstrap-plain"></i>
+                            <i class="devicon-git-plain"></i>
+                            <i class="devicon-linux-plain"></i>
+                            <i class="devicon-photoshop-plain"></i>
+                            <i class="devicon-postgresql-plain"></i>
+                            <i class="devicon-ubuntu-plain"></i>
+                            <i class="devicon-visualstudio-plain"></i>
+                            <i class="devicon-windows8-original"></i> -->
                         </p>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="p-5">
+
                         <div class="row skill-row">
                             <div class="col">
                                 <div class="row">
                                     <div class="col-1 pt-1 mr-2">
-                                        <i class="devicon devicon-c-plain" data-toggle="tooltip" data-placement="top" title="C"></i>
+                                        <i class="devicon devicon-c-plain" data-toggle="tooltip" data-placement="top"
+                                            title="C"></i>
                                     </div>
                                     <div class="col my-auto">
                                         <div class="progress">
-                                            <div class="progress-bar skill-bar" role="progressbar" style="width: 25%"
-                                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                            <div class="progress-bar skill-bar" role="progressbar" style="width: 70%"
+                                                aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -137,12 +150,13 @@
                             <div class="col">
                                 <div class="row">
                                     <div class="col-1 pt-1 mr-2">
-                                        <i class="devicon devicon-html5-plain" data-toggle="tooltip" data-placement="top" title="HTML"></i>
+                                        <i class="devicon devicon-html5-plain" data-toggle="tooltip"
+                                            data-placement="top" title="HTML"></i>
                                     </div>
                                     <div class="col my-auto">
                                         <div class="progress">
-                                            <div class="progress-bar skill-bar" role="progressbar" style="width: 25%"
-                                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                            <div class="progress-bar skill-bar" role="progressbar" style="width: 70%"
+                                                aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -153,12 +167,13 @@
                             <div class="col">
                                 <div class="row">
                                     <div class="col-1 mr-2">
-                                        <i class="devicon devicon-java-plain" data-toggle="tooltip" data-placement="top" title="Java"></i>
+                                        <i class="devicon devicon-java-plain" data-toggle="tooltip" data-placement="top"
+                                            title="Java"></i>
                                     </div>
                                     <div class="col my-auto">
                                         <div class="progress">
-                                            <div class="progress-bar skill-bar" role="progressbar" style="width: 25%"
-                                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                            <div class="progress-bar skill-bar" role="progressbar" style="width: 80%"
+                                                aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -169,12 +184,13 @@
                             <div class="col">
                                 <div class="row">
                                     <div class="col-1 pt-1 mr-2">
-                                        <i class="devicon devicon-javascript-plain" data-toggle="tooltip" data-placement="top" title="Javascript"></i>
+                                        <i class="devicon devicon-javascript-plain" data-toggle="tooltip"
+                                            data-placement="top" title="Javascript"></i>
                                     </div>
                                     <div class="col my-auto">
                                         <div class="progress">
-                                            <div class="progress-bar skill-bar" role="progressbar" style="width: 25%"
-                                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                            <div class="progress-bar skill-bar" role="progressbar" style="width: 70%"
+                                                aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -185,30 +201,74 @@
                             <div class="col">
                                 <div class="row">
                                     <div class="col-1 pt-1 mr-2">
-                                        <i class="devicon devicon-python-plain" data-toggle="tooltip" data-placement="top" title="Python"></i>
+                                        <i class="devicon devicon-postgresql-plain" data-toggle="tooltip"
+                                            data-placement="top" title="PostgreSQL"></i>
                                     </div>
                                     <div class="col my-auto">
                                         <div class="progress">
-                                            <div class="progress-bar skill-bar" role="progressbar" style="width: 25%"
-                                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                            <div class="progress-bar skill-bar" role="progressbar" style="width: 60%"
+                                                aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="row skill-row">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col-1 pt-1 mr-2">
+                                        <i class="devicon devicon-python-plain" data-toggle="tooltip"
+                                            data-placement="top" title="Python"></i>
+                                    </div>
+                                    <div class="col my-auto">
+                                        <div class="progress">
+                                            <div class="progress-bar skill-bar" role="progressbar" style="width: 90%"
+                                                aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
-            <!-- <div class="row align-items-center">
-                <div class="col">
-                    asdasdasddasd
-                </div>
-            </div> -->
+
         </div>
     </section>
 
+    <!-- Education -->
+    <section class="d-flex align-items-center bg-light section-secondary" id="education">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="p-5">
+                        <h2 class="display-4 mb-4 primary-text">Education</h2>
+                        <div>
+                            <h5 class="secondary-text m-0">University of New South Wales</h5>
+                            <p class="font-weight-light">Bachelor of Engineering (Software)</p>
+                        </div>
+                        <div>
+                            <h5 class="secondary-text m-0">University of New South Wales</h5>
+                            <p class="font-weight-light">Bachelor of Engineering (Software)</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="p-5">
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
     <!-- Projects -->
-    <section id="projects">
+    <section class="d-flex align-items-center" id="projects">
         <div class="container">
             <div class="row">
                 <div class="col text-center primary-text">
@@ -303,6 +363,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+
 </body>
 
 </html>
