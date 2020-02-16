@@ -1,7 +1,3 @@
-.jumbotron {
-    display: flex;
-    align-items: center;
-}
 
 .header {
     position: static;
@@ -22,6 +18,14 @@
     color: #F9F9F9;
 }
 
+.header-downbar {
+    position: absolute;
+    height: 50px;
+    bottom: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
 section {
     height: 100vh;
     padding: 20px 0 20px 0;
@@ -40,9 +44,20 @@ section {
     margin-bottom: 4px;
 }
 
+.badge {
+    color: white;
+    background-color: var(--primary-color);
+    padding: 10px;
+}
+
 .devicon, .devicons {
     color: var(--primary-color);
     font-size: 35px;
+}
+
+.devicon-small {
+    color: white;
+    margin-right: 5px;
 }
 
 hr {
