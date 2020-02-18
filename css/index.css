@@ -51,6 +51,7 @@ section {
 .badge-custom {
     color: white;
     background-color: var(--primary-color);
+    margin: 1px 0px 1px 0px;
 }
 
 .icon {
