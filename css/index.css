@@ -56,6 +56,10 @@ section {
     font-weight: 300;
 }
 
+.project-card .card-body {
+    padding-bottom: 10px !important;
+}
+
 .badge {
     font-size: 12px;
     font-weight: 500;
