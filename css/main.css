@@ -14,10 +14,12 @@ body {
 }
 
 .primary-text {
+    font-weight: 500;
     color: var(--primary-color);
 }
 
 .secondary-text {
+    font-weight: 300;
     color: var(--secondary-color);
 }
 

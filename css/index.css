@@ -27,8 +27,20 @@
 
 section {
     min-height: 100vh;
-
     padding: 20px 0 20px 0;
+}
+
+.info-table td, th {
+    padding: 0 0 15px 0 !important;
+    margin: 0 !important;
+}
+
+.info-table th {
+    font-weight: 500;
+}
+
+.links a {
+    text-decoration: none !important;
 }
 
 .skill-bar {
@@ -42,6 +54,11 @@ section {
 
 .skill-name {
     margin-bottom: 4px;
+}
+
+.education-item p, dd {
+    margin: 0;
+    font-weight: 300;
 }
 
 .badge {
@@ -65,7 +82,7 @@ section {
 }
 
 hr {
-    background-color: #CB2D6F;
+    background-color: black;
     height: 1px;
     width: 80px;
     border: 0;

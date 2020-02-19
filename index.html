@@ -27,6 +27,8 @@
     <!-- Devicons - http://vorillaz.github.io/devicons -->
     <link href='https://cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
 
+    <script src="https://kit.fontawesome.com/513602d0b7.js" crossorigin="anonymous"></script>
+
     <title>Nathan Xiao</title>
 </head>
 
@@ -89,30 +91,66 @@
     </div>
 
     <!-- About Me -->
-    <section class="d-none align-items-center" id="aboutme">
+    <section class="d-flex align-items-center bg-light section-secondary" id="aboutme">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 text-center">
-                    <div class="p-5">
-                        <img class="img-responsive rounded-circle" src="img/dummy-profile-pic.jpg" style="width: 70%;">
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="p-5">
-                        <h2 class="display-4 mb-4 primary-text">About Me</h2>
-                        <p class="secondary-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-                            <!-- class="lead" -->
-                            <!-- class="lead" -->
-                            dolor
-                            nisl, mollis ut fringilla consectetur, dapibus ut turpis. Cras sed lacinia lacus. Sed quam
-                            lorem, dignissim a efficitur ac, vehicula sed elit. Pellentesque aliquet lobortis maximus.
-                            Aliquam volutpat nunc ac venenatis dignissim. Phasellus molestie placerat gravida. Etiam
-                            eget
-                            tincidunt tellus, eu vehicula dui. Aliquam erat volutpat. Nullam vel dui aliquam dui semper
-                            aliquet. Nunc posuere nisl diam, vel varius tellus interdum sed. Donec pharetra augue ut
-                            mauris
-                            porta, eu faucibus est auctor.
-                        </p>
+            <div class="row ">
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-5">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <h1 class="card-title primary-text">Nathan Xiao</h1>
+                                    <h6 class="card-subtitle mb-3 secondary-text"><i>Software Engineering Student</i></h6>
+                                    <p class="secondary-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+                                        dolor
+                                        nisl, mollis ut fringilla consectetur, dapibus ut turpis. Cras sed lacinia lacus. Sed quam
+                                        lorem, dignissim a efficitur ac, vehicula sed elit. Pellentesque aliquet lobortis maximus.
+                                        Aliquam volutpat nunc ac venenatis dignissim. Phasellus molestie placerat gravida. Etiam
+                                        eget
+                                        tincidunt tellus, eu vehicula dui. Aliquam erat volutpat.
+                                    </p>
+                                    <table class="info-table table table-borderless">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" style="width: 18%;"></th>
+                                                <th scope="col"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Name:</th>
+                                                <td class="secondary-text">Nathan Xiao</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Email:</th>
+                                                <td class="secondary-text">
+                                                    nathan.xiao1@gmail.com
+                                                    <br>
+                                                    XDN2369@hotmail.com
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Phone:</th>
+                                                <td class="secondary-text">+61 481 318 138</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Location:</th>
+                                                <td class="secondary-text">Homebush West NSW 2140 Australia</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="links">
+                                        <a class="icon fab fa-linkedin mr-1"
+                                            href="https://www.linkedin.com/in/nathan-xiao"></a>
+                                        <a class="icon fab fa-github-square mr-1"
+                                            href="https://github.com/nathan-xiao1"></a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <img src="img/profile-pic.jpg">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -122,10 +160,20 @@
     <!-- Experience -->
     <section class="d-flex align-items-center" id="experience">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row">
+                <div class="col text-center">
+                    <div class="py-5">
+                        <h2 class="display-4 mb-0 primary-text font-weight-bold text-center text-uppercase">Experience
+                        </h2>
+                        <p class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+                            dolor nisl.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-lg-6">
                     <div class="p-5">
-                        <h2 class="display-4 mb-4 primary-text">Experience</h2>
                         <p class="secondary-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
                             dolor
                             nisl, mollis ut fringilla consectetur, dapibus ut turpis. Cras sed lacinia lacus. Sed quam
@@ -141,7 +189,6 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="p-5">
-
                         <div class="row skill-row">
                             <div class="col">
                                 <div class="row">
@@ -371,40 +418,50 @@
             <div class="row align-items-center">
                 <div class="col-lg-12">
                     <div class="p-5">
-                        <h2 class="display-4 mb-4 primary-text">Education</h2>
-                        <div class="row">
+                        <div class="row education-item">
+                            <div class="col text-center">
+                                <div class="py-5">
+                                    <h2 class="display-4 mb-0 primary-text font-weight-bold text-center text-uppercase">
+                                        Education</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row education-item">
                             <div class="col">
                                 <div class="row my-3">
                                     <div class="col-auto">
                                         <img src="img/HBHS.jpg" style="width: 90px;">
                                     </div>
                                     <div class="col align-self-center">
-                                        <h5 class="secondary-text m-0">
-                                            Homebush Boys High School
-                                        </h5>
-                                        <p class="font-weight-light m-0">Higher School Certificate</p>
-                                        <p class="font-weight-light m-0">
-                                            <i>2012 - 2017</i>
-                                        </p>
-                                        <br>
+                                        <dl>
+                                            <h5 class="m-0">
+                                                Homebush Boys High School
+                                            </h5>
+                                            <dd>Higher School Certificate</dd>
+                                            <dd><i>2012 - 2017</i></dd>
+                                        </dl>
                                         <dl>
                                             HSC 2017 - 95.40 ATAR
-                                            <dd class="font-weight-light m-0">English Advanced</dd>
-                                            <dd class="font-weight-light m-0">Information Processes and Technology</dd>
-                                            <dd class="font-weight-light m-0">Mathematics Extension 1</dd>
-                                            <dd class="font-weight-light m-0">Mathematics Extension 2</dd>
-                                            <dd class="font-weight-light m-0">Physics</dd>
-                                            <dd class="font-weight-light m-0">Software Design and Development</dd>
+                                            <dd>English Advanced</dd>
+                                            <dd>Information Processes and Technology</dd>
+                                            <dd>Mathematics Extension 1</dd>
+                                            <dd>Mathematics Extension 2</dd>
+                                            <dd>Physics</dd>
+                                            <dd>Software Design and Development</dd>
                                         </dl>
                                         <dl>
-                                            NCSS Programming Challenge (Intermediate) <i
-                                                class="font-weight-light">2016</i>
-                                            <dd class="font-weight-light m-0">Achieved a perfect score</dd>
+                                            NCSS Programming Challenge (Intermediate)
+                                            <dd>
+                                                <i class="font-weight-light">2016</i>
+                                            </dd>
+                                            <dd>Achieved a perfect score</dd>
                                         </dl>
                                         <dl>
-                                            100% Attendance <i class="font-weight-light">2012 – 2016</i>
+                                            100% Attendance Award
+                                            <dd>
+                                                <i class="font-weight-light">2012 – 2016</i>
+                                            </dd>
                                         </dl>
-
                                     </div>
                                 </div>
                             </div>
@@ -414,63 +471,60 @@
                                         <img src="img/UNSW.jpg" style="width: 90px;">
                                     </div>
                                     <div class="col align-self-center">
-                                        <h5 class="secondary-text m-0">
-                                            University of New South Wales
-                                        </h5>
-                                        <p class="font-weight-light m-0">
-                                            Bachelor of Engineering (Honours) (Software)
-                                        </p>
-                                        <p class="font-weight-light m-0">
-                                            <i>2018 - Present</i>
-                                        </p>
-                                        <br>
+                                        <dl>
+                                            <h5 class="m-0">
+                                                University of New South Wales
+                                            </h5>
+                                            <dd>
+                                                Bachelor of Engineering (Honours) (Software)
+                                            </dd>
+                                            <dd><i>2018 - Present</i></dd>
+                                        </dl>
                                         <dl>
                                             Distinction Average (80.50 WAM)
-                                            <dd class="font-weight-light m-0">Academic statement available upon request
+                                            <dd>Academic statement available upon request
                                             </dd>
                                         </dl>
                                         <dl>
                                             Current Courses
-                                            <dd class="font-weight-light m-0">COMP3231 Operating Systems</dd>
-                                            <dd class="font-weight-light m-0">COMP3411 Artificial Intelligence</dd>
-                                            <dd class="font-weight-light m-0">SENG3011 Software Eng Workshop 3</dd>
+                                            <dd>COMP3231 Operating Systems</dd>
+                                            <dd>COMP3411 Artificial Intelligence</dd>
+                                            <dd>SENG3011 Software Eng Workshop 3</dd>
                                         </dl>
                                         <dl>
                                             Completed Courses (COMP only)
-                                            <dd class="font-weight-light m-0">COMP1511 Introduction to Programming - HD
+                                            <dd>COMP1511 Introduction to Programming - HD
                                             </dd>
-                                            <dd class="font-weight-light m-0">COMP1521 Computer Systems Fundamentals -
+                                            <dd>COMP1521 Computer Systems Fundamentals -
                                                 HD
                                             </dd>
-                                            <dd class="font-weight-light m-0">COMP1531 Software Eng Fundamentals - HD
+                                            <dd>COMP1531 Software Eng Fundamentals - HD
                                             </dd>
-                                            <dd class="font-weight-light m-0">COMP2041 Software Construction - HD</dd>
-                                            <dd class="font-weight-light m-0">COMP2111 System Modelling and Design - D
+                                            <dd>COMP2041 Software Construction - HD</dd>
+                                            <dd>COMP2111 System Modelling and Design - D
                                             </dd>
-                                            <dd class="font-weight-light m-0">COMP2511 O-O Design & Programming - HD
+                                            <dd>COMP2511 O-O Design & Programming - HD
                                             </dd>
-                                            <dd class="font-weight-light m-0">COMP2521 Data Structures and Algorithms -
+                                            <dd>COMP2521 Data Structures and Algorithms -
                                                 CR
                                             </dd>
-                                            <dd class="font-weight-light m-0">COMP3311 Database Systems - D</dd>
-                                            <dd class="font-weight-light m-0">COMP6441 Security Engineering - D</dd>
+                                            <dd>COMP3311 Database Systems - D</dd>
+                                            <dd>COMP6441 Security Engineering - D</dd>
                                         </dl>
                                         <dl>
                                             Future Courses (2020)
-                                            <p class="font-weight-light m-0">COMP3121 Algorithms and Programming
-                                                Techniques</p>
-                                            <p class="font-weight-light m-0">COMP3141 Software System Design and
-                                                Implementation</p>
-                                            <p class="font-weight-light m-0">COMP3331 Computer Networks and
-                                                Applications</p>
-                                            <p class="font-weight-light m-0">COMP6771 Advanced C++ Programming</p>
+                                            <dd>COMP3121 Algorithms and Programming
+                                                Techniques</dd>
+                                            <dd>COMP3141 Software System Design and
+                                                Implementation</dd>
+                                            <dd>COMP3331 Computer Networks and
+                                                Applications</dd>
+                                            <dd>COMP6771 Advanced C++ Programming</dd>
                                         </dl>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -487,14 +541,14 @@
     <section class="d-flex align-items-center" id="projects">
         <div class="container">
             <div class="row">
-                <div class="col text-center primary-text">
+                <div class="col text-center">
                     <div class="py-5">
-                        <h2 class="display-4 primary-text">Projects</h2>
-                        <p class="secondary-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+                        <h2 class="display-4 mb-0 primary-text font-weight-bold text-center text-uppercase">Projects
+                        </h2>
+                        <p class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
                             dolor nisl.
                         </p>
                     </div>
-
                 </div>
             </div>
             <div class="row">
