@@ -43,17 +43,12 @@ section {
     text-decoration: none !important;
 }
 
-.skill-bar {
+.progress {
+    height: 20px;
+}
+
+.progress-bar {
     background-color: var(--primary-color);
-}
-
-.skill-row {
-    margin-top: 8px;
-    margin-bottom: 8px;
-}
-
-.skill-name {
-    margin-bottom: 4px;
 }
 
 .education-item p, dd {
@@ -62,13 +57,15 @@ section {
 }
 
 .badge {
+    font-size: 12px;
+    font-weight: 500;
     padding: 10px;
 }
 
 .badge-custom {
     color: white;
     background-color: var(--primary-color);
-    margin: 1px 0px 1px 0px;
+    margin: 3px 0px 3px 0px;
 }
 
 .icon {
