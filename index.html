@@ -117,39 +117,53 @@
                                     <table class="info-table table table-borderless">
                                         <thead>
                                             <tr>
-                                                <th scope="col" style="width: 18%;"></th>
+                                                <th scope="col" style="width: 10%;"></th>
                                                 <th scope="col"></th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <th scope="row">Name:</th>
+                                                <th scope="row">
+                                                    <i class="icon material-icons">
+                                                        person
+                                                    </i>
+                                                </th>
                                                 <td class="secondary-text">Nathan Xiao</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">Email:</th>
+                                                <th scope="row">
+                                                    <i class="icon material-icons">
+                                                        email
+                                                    </i>
+                                                </th>
                                                 <td class="secondary-text">
-                                                    nathan.xiao1@gmail.com
+                                                    nathan.xiao1@gmail.com (Primary)
                                                     <br>
                                                     XDN2369@hotmail.com
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">Phone:</th>
+                                                <th scope="row">
+                                                    <i class="icon material-icons">
+                                                        phone
+                                                    </i>
+                                                </th>
                                                 <td class="secondary-text">+61 481 318 138</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">Location:</th>
+                                                <th scope="row">
+                                                    <i class="icon material-icons">
+                                                        location_on
+                                                    </i>
+                                                </th>
                                                 <td class="secondary-text">Homebush West NSW 2140 Australia</td>
                                             </tr>
                                         </tbody>
                                     </table>
-                                    <div class="links">
-                                        <a class="icon fab fa-linkedin mr-1"
-                                            href="https://www.linkedin.com/in/nathan-xiao"></a>
-                                        <a class="icon fab fa-github-square mr-1"
-                                            href="https://github.com/nathan-xiao1"></a>
-                                    </div>
+                                    <a class="icon icon-link fab fa-linkedin mr-1"
+                                        href="https://www.linkedin.com/in/nathan-xiao"></a>
+                                    <a class="icon icon-link fab fa-github-square mr-1"
+                                        href="https://github.com/nathan-xiao1"></a>
                                 </div>
                                 <div class="col-lg-6">
                                     <img src="img/profile-pic.jpg">
@@ -538,7 +552,12 @@
                             <div class="col text-center">
                                 <div class="py-5">
                                     <h2 class="display-4 mb-0 primary-text font-weight-bold text-center text-uppercase">
-                                        Education</h2>
+                                        Education
+                                    </h2>
+                                    <p class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Maecenas
+                                        dolor nisl.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -742,18 +761,37 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <span class="text-muted">Place sticky footer content here.</span>
+        <div class="container align-items-center text-center py-3">
+            <div class="row">
+                <div class="col d-flex justify-content-center mb-2">
+                    <a class="icon icon-link text-secondary fab fa-linkedin-in mr-3"
+                        href="https://www.linkedin.com/in/nathan-xiao"></a>
+                    <a class="icon icon-link text-secondary fab fa-github" href="https://github.com/nathan-xiao1"></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col d-flex justify-content-center">
+                    <small class="secondary-text m-0">Made with Bootstrap</small>
+                </div>
+            </div>
         </div>
     </footer>
 
     <!-- Optional JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="js/scroll-navbar.js"></script>
+    
+    <!-- Initialise tooltips -->
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
 
 </body>
 
