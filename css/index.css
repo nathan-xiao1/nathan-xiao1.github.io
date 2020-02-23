@@ -2,12 +2,23 @@
     position: static;
     height: 100vh;
     width: 100%;
+    background-color: transparent;
+    margin-bottom: 0px;
+}
+
+.header-background {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: -2;
     background-image: url("../img/header-bg.png");
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
     background-size: cover;
-    margin-bottom: 0px;
 }
 
 .header-content {
@@ -25,9 +36,21 @@
     background-color: rgba(0, 0, 0, 0.05) !important;
 }
 
+.down-arrow {
+    padding-top: 8px;
+}
+
+.background {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
 section {
     min-height: 100vh;
-    padding: 20px 0 20px 0;
+    padding: 10px 0 10px 0;
 }
 
 .info-table td, th {

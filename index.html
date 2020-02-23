@@ -47,33 +47,30 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#home">Home<span class="sr-only">(current)</span></a>
+                        <a class="nav-link text-uppercase" href="#home">Home<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#experience">Experience</a>
+                        <a class="nav-link text-uppercase" href="#aboutme">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#education">Education</a>
+                        <a class="nav-link text-uppercase" href="#experience">Experience</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
+                        <a class="nav-link text-uppercase" href="#education">Education</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            GitHub
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="https://github.com/nathan-xiao1">nathan-xiao1 (Personal)</a>
-                            <a class="dropdown-item" href="https://github.com/z5205737">z5205737 (Work)</a>
-                        </div>
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase" href="#projects">Projects</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Jumbotron Header -->
+    <!-- Jumbotron Header Background -->
+    <!-- Seperated so text can appear infront of particles.js -->
+    <div class="header-background"></div>
+
+    <!-- Jumbotron Header Content -->
     <div class="d-flex jumbotron jumbotron-fluid header m-0" id="home">
         <div class="container header-content align-self-center">
             <h1 class="display-1 font-weight-bold m-0">Nathan Xiao</h1>
@@ -81,9 +78,9 @@
             <button class="btn btn-outline-light" type="submit"
                 onclick="window.open('file/NathanXiao-Resume.pdf')">Download CV</button>
         </div>
-        <a class="d-flex container-fluid header-downbar align-items-center" href="#experience">
+        <a class="d-flex container-fluid header-downbar align-items-center" href="#aboutme">
             <div class="mx-auto">
-                <i class="material-icons">
+                <i class="material-icons down-arrow">
                     expand_more
                 </i>
             </div>
@@ -103,7 +100,8 @@
                                     <h6 class="card-subtitle mb-2 secondary-text">
                                         <i>Software Engineering Student</i>
                                     </h6>
-                                    <p class="secondary-text mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    <p class="secondary-text mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elit.
                                         Maecenas
                                         dolor
                                         nisl, mollis ut fringilla consectetur, dapibus ut turpis. Cras sed lacinia
@@ -175,6 +173,13 @@
                 </div>
             </div>
         </div>
+        <a class="d-flex container-fluid align-items-center align-self-end position-absolute" href="#experience">
+            <div class="mx-auto">
+                <i class="material-icons down-arrow">
+                    expand_more
+                </i>
+            </div>
+        </a>
     </section>
 
     <!-- Experience -->
@@ -542,6 +547,13 @@
                 </div>
             </div>
         </div>
+        <a class="d-flex container-fluid align-items-center align-self-end position-absolute" href="#education">
+            <div class="mx-auto">
+                <i class="material-icons down-arrow">
+                    expand_more
+                </i>
+            </div>
+        </a>
     </section>
 
     <!-- Education -->
@@ -677,6 +689,13 @@
             </div>
 
         </div>
+        <a class="d-flex container-fluid align-items-center align-self-end position-absolute" href="#projects">
+            <div class="mx-auto">
+                <i class="material-icons down-arrow">
+                    expand_more
+                </i>
+            </div>
+        </a>
     </section>
 
     <!-- Projects -->
@@ -764,6 +783,13 @@
                 </div>
             </div>
         </div>
+        <a class="d-flex container-fluid align-items-center align-self-end position-absolute" href="#home">
+            <div class="mx-auto">
+                <i class="material-icons down-arrow">
+                    expand_less
+                </i>
+            </div>
+        </a>
     </section>
 
     <!-- Footer -->
@@ -789,15 +815,31 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+
+    <!-- particles.js - https://marcbruederlin.github.io/particles.js/ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+
     <script src="js/scroll-navbar.js"></script>
 
-    <!-- Initialise tooltips -->
+    <canvas class="background"></canvas>
+
+
     <script>
+        // <!-- Initialise tooltips -->
         $(document).ready(function () {
             $('[data-toggle="tooltip"]').tooltip();
         });
+        // <!-- Initialise particles.js -->
+        window.onload = function () {
+            Particles.init({
+                selector: '.background',
+                color: ["#4878C0", "#63A4D6"],
+                connectParticles: true,
+                speed: 0.2
+            });
+        };
     </script>
 
 </body>
