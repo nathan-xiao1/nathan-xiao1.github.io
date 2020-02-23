@@ -72,6 +72,8 @@ section {
 
 .progress-bar {
     background-color: var(--primary-color);
+    -webkit-transition: none !important;
+    transition: none !important;
 }
 
 .education-item p, dd {
