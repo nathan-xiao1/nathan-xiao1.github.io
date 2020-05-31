@@ -38,7 +38,7 @@
     <nav class="navbar navbar-dark navbar-expand-lg fixed-top w-100 navbar-custom" id="navbar">
         <div class="container">
             <a class="navbar-brand" href="#">
-                Bootstrap
+                Nathan Xiao
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,6 +60,15 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-uppercase" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-uppercase dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            More
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Nothing yet</a>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -92,7 +101,7 @@
         <div class="container">
             <div class="row ">
                 <div class="col">
-                    <div class="card shadow-sm">
+                    <div class="card border-0 shadow">
                         <div class="card-body p-5">
                             <div class="row">
                                 <div class="col-lg-6">
@@ -155,7 +164,7 @@
                                                         location_on
                                                     </i>
                                                 </th>
-                                                <td class="secondary-text">Homebush West NSW 2140 Australia</td>
+                                                <td class="secondary-text">Sydney, Australia</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -451,6 +460,10 @@
                                             <i class="icon-small devicon-jquery-plain"></i>
                                             <span>jQuery</span>
                                         </span>
+                                        <span class="badge badge-custom">
+                                            <i class="icon-small devicon-react-original"></i>
+                                            <span>React</span>
+                                        </span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -644,41 +657,14 @@
                                             <dd>Academic statement available upon request
                                             </dd>
                                         </dl>
-                                        <dl>
+                                        <dl id="current-course">
                                             Current Courses
-                                            <dd>COMP3231 Operating Systems</dd>
-                                            <dd>COMP3411 Artificial Intelligence</dd>
-                                            <dd>SENG3011 Software Eng Workshop 3</dd>
                                         </dl>
-                                        <dl>
+                                        <dl id="completed-course">
                                             Completed Courses (COMP only)
-                                            <dd>COMP1511 Introduction to Programming - HD
-                                            </dd>
-                                            <dd>COMP1521 Computer Systems Fundamentals -
-                                                HD
-                                            </dd>
-                                            <dd>COMP1531 Software Eng Fundamentals - HD
-                                            </dd>
-                                            <dd>COMP2041 Software Construction - HD</dd>
-                                            <dd>COMP2111 System Modelling and Design - D
-                                            </dd>
-                                            <dd>COMP2511 O-O Design & Programming - HD
-                                            </dd>
-                                            <dd>COMP2521 Data Structures and Algorithms -
-                                                CR
-                                            </dd>
-                                            <dd>COMP3311 Database Systems - D</dd>
-                                            <dd>COMP6441 Security Engineering - D</dd>
                                         </dl>
-                                        <dl>
+                                        <dl id="future-course">
                                             Future Courses (2020)
-                                            <dd>COMP3121 Algorithms and Programming
-                                                Techniques</dd>
-                                            <dd>COMP3141 Software System Design and
-                                                Implementation</dd>
-                                            <dd>COMP3331 Computer Networks and
-                                                Applications</dd>
-                                            <dd>COMP6771 Advanced C++ Programming</dd>
                                         </dl>
                                     </div>
                                 </div>
@@ -714,7 +700,7 @@
             </div>
             <div class="row mb-4">
                 <div class="col-lg-6">
-                    <div class="card project-card mb-3">
+                    <div class="card project-card shadow mb-3">
                         <img src="img/Decision.jpg" class="card-img-top" alt="Decision">
                         <div class="card-body">
                             <h5 class="card-title">Decision</h5>
@@ -748,7 +734,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="card project-card mb-3">
+                    <div class="card project-card shadow mb-3">
                         <img src="img/website.jpg" class="card-img-top" alt="Website">
                         <div class="card-body">
                             <h5 class="card-title">Portfolio Website</h5>
@@ -784,12 +770,13 @@
             </div>
             <div class="row mb-4">
                 <div class="col-lg-6">
-                    <div class="card project-card mb-3">
+                    <div class="card project-card shadow mb-3">
                         <img src="img/flites.jpg" class="card-img-top" alt="flites">
                         <div class="card-body">
                             <h5 class="card-title">flites</h5>
                             <div class="card-text secondary-text">
-                                <p>A flight price analysis and prediction platform using data from public APIs such as SkyScanner.</p>
+                                <p>A flight price analysis and prediction platform using data from public APIs such as
+                                    SkyScanner.</p>
                             </div>
                             <div class="d-flex justify-content-between align-items-end mt-2">
                                 <p class="card-text m-0">
@@ -818,12 +805,13 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="card project-card mb-3">
+                    <div class="card project-card shadow mb-3">
                         <img src="img/dungeon.jpg" class="card-img-top" alt="Dungeon">
                         <div class="card-body">
                             <h5 class="card-title">Dungeon</h5>
                             <div class="card-text secondary-text">
-                                <p>A 2D dungeon-style puzzle game written in Java and JavaFX for GUI. Includes a simple level designer.</p>
+                                <p>A 2D dungeon-style puzzle game written in Java and JavaFX for GUI. Includes a simple
+                                    level designer.</p>
                             </div>
                             <div class="d-flex justify-content-between align-items-end mt-2">
                                 <p class="card-text m-0">
@@ -842,12 +830,13 @@
             </div>
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="card project-card mb-3">
+                    <div class="card project-card shadow mb-3">
                         <img src="img/website.jpg" class="card-img-top" alt="py-scanner">
                         <div class="card-body">
                             <h5 class="card-title">py-scanner</h5>
                             <div class="card-text secondary-text">
-                                <p>A command-line based Python port scanner. Made as a research project to learn about low level network programming.</p>
+                                <p>A command-line based Python port scanner. Made as a research project to learn about
+                                    low level network programming.</p>
 
                             </div>
                             <div class="d-flex justify-content-between align-items-end mt-2">
@@ -865,12 +854,13 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="card project-card mb-3">
+                    <div class="card project-card shadow mb-3">
                         <img src="img/website.jpg" class="card-img-top" alt="Website">
                         <div class="card-body">
                             <h5 class="card-title">Online Network Tools</h5>
                             <div class="card-text secondary-text">
-                                <p>A web application with different network tools such as ping, ... and more stuff in the future.</p>
+                                <p>A web application with different network tools such as ping, ... and more stuff in
+                                    the future.</p>
                             </div>
                             <div class="d-flex justify-content-between align-items-end mt-2">
                                 <p class="card-text m-0">
@@ -938,6 +928,7 @@
     <!-- particles.js - https://marcbruederlin.github.io/particles.js/ -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
 
+    <script src="js/courses.js"></script>
     <script src="js/scroll-navbar.js"></script>
     <script src="js/progress-bar-animate.js"></script>
 
