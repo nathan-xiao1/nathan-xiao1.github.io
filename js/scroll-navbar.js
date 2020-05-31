@@ -9,7 +9,3 @@ window.onscroll = () => {
         navbar.classList.add("scrolled");
     }
 };
-
-window.onload = () => {
-    if (window.scrollY) navbar.classList.add("scrolled");
-}
