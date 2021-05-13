@@ -1,4 +1,10 @@
-$(window).on('scroll.animateBar', function () {
+function IsInViewport(elm) {
+    var rect = elm.getBoundingClientRect();
+    var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+    return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+}
+
+function animateProgressBar() {
     if (IsInViewport(document.getElementById("exp-container"))) {
         console.log("Animating")
         $(".progress-bar").each(function () {
@@ -8,10 +14,14 @@ $(window).on('scroll.animateBar', function () {
         });
         $(window).off('scroll.animateBar');
     }
+}
+
+// Animate if in viewpoint when scrolling
+$(window).on('scroll.animateBar', function () {
+    animateProgressBar()
 });
 
-function IsInViewport(elm) {
-    var rect = elm.getBoundingClientRect();
-    var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
-    return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
-}
+// Animate if in viewpoint when loaded
+$( document ).ready(() => {
+    animateProgressBar()
+})
