@@ -69,6 +69,12 @@
                             More
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="file/NathanXiao-Resume.pdf" target="_blank">Resume</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="https://nathan-xiao1.github.io">GitHub</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="https://www.linkedin.com/in/nathan-xiao">LinkedIn</a>
+                            <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="https://nathan-xiao1.github.io/mouse-click-test">Mouse Click
                                 Test</a>
                         </div>
@@ -87,8 +93,12 @@
         <div class="container header-content align-self-center pl-4 pl-sm-5">
             <h1 class="display-1 font-weight-bold m-0">Nathan Xiao</h1>
             <p class="lead">Software Engineering student at the University of New South Wales (UNSW)</p>
-            <button class="btn btn-outline-light" type="submit"
-                onclick="window.open('file/NathanXiao-Resume.pdf')">Download CV</button>
+            <div class="d-flex align-items-center">
+                <a class="icon icon-header icon-link fab fa-linkedin mr-2"
+                    href="https://www.linkedin.com/in/nathan-xiao"></a>
+                <a class="icon icon-header icon-link fab fa-github-square mr-2"
+                    href="https://github.com/nathan-xiao1"></a>
+            </div>
         </div>
         <a class="d-flex container-fluid header-downbar align-items-center" href="#aboutme">
             <div class="mx-auto">
@@ -171,10 +181,16 @@
                                             </tr>
                                         </tbody>
                                     </table>
-                                    <a class="icon icon-link fab fa-linkedin mr-1"
-                                        href="https://www.linkedin.com/in/nathan-xiao"></a>
-                                    <a class="icon icon-link fab fa-github-square mr-1"
-                                        href="https://github.com/nathan-xiao1"></a>
+                                    <div class="mb-2">
+                                        <button class="btn btn-header" type="submit"
+                                            onclick="window.open('file/NathanXiao-Resume.pdf', '_blank')">Download Resume</button>
+                                    </div>
+                                    <!-- <div class="">
+                                        <a class="icon icon-link fab fa-linkedin mr-1"
+                                            href="https://www.linkedin.com/in/nathan-xiao"></a>
+                                        <a class="icon icon-link fab fa-github-square mr-1"
+                                            href="https://github.com/nathan-xiao1"></a>
+                                    </div> -->
                                 </div>
                                 <div class="col-md-6 d-none d-md-block d-flex align-items-center">
                                     <img class="img-fluid" src="img/profile-pic.jpg">

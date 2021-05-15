@@ -62,10 +62,6 @@ section {
     font-weight: 500;
 }
 
-.icon-link {
-    text-decoration: none !important;
-}
-
 .progress {
     height: 20px;
 }
@@ -109,6 +105,25 @@ section {
     color: white;
     font-size: 14px;
     margin-right: 8px;
+}
+
+.icon-link {
+    text-decoration: none !important;
+}
+
+.icon-header {
+    color: #F9F9F9 !important;
+}
+
+.icon-body {
+    color: #F9F9F9 !important;
+}
+
+.btn-header {
+    font-size: 14px;
+    border: 0;
+    color: var(--primary-color);
+    background-color: #F9F9F9;
 }
 
 hr {
