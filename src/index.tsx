@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { RouterProvider } from 'react-router-dom';
+import App from './app/App';
 import reportWebVitals from './reportWebVitals';
-import router from './Routes/Router';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import './index.scss';
@@ -12,9 +12,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <main className="container main-container">
-      <RouterProvider router={router} />
-    </main>
+    <App />
   </React.StrictMode>
 );
 
