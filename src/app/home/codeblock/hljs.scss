@@ -1,0 +1,90 @@
+@use '../../../styles/variables' as *;
+
+pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
+}
+
+code.hljs {
+  padding: 3px 5px;
+}
+
+.hljs {
+  color: #abb2bf;
+  background: $code-background;
+
+  &-comment,
+  &-quote {
+    color: #5c6370;
+    font-style: italic;
+  }
+
+  &-doctag,
+  &-formula,
+  &-keyword {
+    color: $primary;
+  }
+
+  &-deletion,
+  &-name,
+  &-section,
+  &-selector-tag,
+  &-subst {
+    color: #e06c75;
+  }
+
+  &-literal {
+    color: #56b6c2;
+  }
+
+  &-addition,
+  &-attribute,
+  &-meta &-string,
+  &-regexp,
+  &-string {
+    color: #80cbc4;
+  }
+
+  &-attr,
+  &-number,
+  &-selector-attr,
+  &-selector-class,
+  &-selector-pseudo,
+  &-template-variable,
+  &-type,
+  &-variable {
+    color: #c3e88d;
+  }
+
+  &-bullet,
+  &-link,
+  &-meta,
+  &-selector-id,
+  &-symbol,
+  &-title {
+    color: #61aeee;
+  }
+
+  &-built_in,
+  &-class &-title,
+  &-title.class_ {
+    color: #e6c07b;
+  }
+
+  &-emphasis {
+    font-style: italic;
+  }
+
+  &-strong {
+    font-weight: 700;
+  }
+
+  &-link {
+    text-decoration: underline;
+  }
+
+  &-punctuation {
+    color: $accent;
+  }
+}

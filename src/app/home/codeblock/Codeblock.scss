@@ -1,0 +1,33 @@
+@use '../../../styles/variables' as *;
+
+.codeblock {
+  &-container {
+    display: flex;
+    flex-direction: column;
+
+    padding: 1.25rem 1.5rem;
+
+    background-color: $code-background;
+    border-radius: 8px;
+
+    font-size: 1rem;
+  }
+
+  &-json {
+    &-key {
+      color: #c3e88d;
+    }
+
+    &-value {
+      color: #80cbc4;
+    }
+
+    &-punctuation {
+      color: #bfc7d5;
+    }
+
+    &-quote {
+      color: #d9f5dd;
+    }
+  }
+}

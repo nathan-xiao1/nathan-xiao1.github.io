@@ -1,0 +1,84 @@
+@use 'variables' as *;
+@import 'bootstrap';
+
+/**
+ * Text colour
+ */
+.text-primary {
+  color: $primary;
+}
+
+.text-primary-light {
+  color: $primary-light;
+}
+.text-primary-dark {
+  color: $primary-dark;
+}
+
+.text-secondary {
+  color: $secondary;
+}
+.text-secondary-light {
+  color: $secondary-light;
+}
+.text-secondary-dark {
+  color: $secondary-dark;
+}
+
+.text-accent {
+  color: $accent;
+}
+.text-accent-light {
+  color: $accent-light;
+}
+.text-accent-dark {
+  color: $accent-dark;
+}
+
+.text-light {
+  color: $white;
+}
+
+@each $weight, $colour in $grays {
+  .text-gray-#{$weight} {
+    color: $colour;
+  }
+}
+
+/**
+ * Text size
+ */
+.text-xxsmall {
+  font-size: $text-xxsmall;
+}
+
+.text-xsmall {
+  font-size: $text-xsmall;
+}
+
+.text-small {
+  font-size: $text-small;
+}
+
+.text-mid {
+  font-size: $text-mid;
+}
+
+.text-large {
+  font-size: $text-large;
+}
+
+.text-xlarge {
+  font-size: $text-xlarge;
+}
+
+.text-xxlarge {
+  font-size: $text-xxlarge;
+}
+
+/**
+ * Custom styles
+ */
+.text-heading {
+  font-size: $text-large;
+}

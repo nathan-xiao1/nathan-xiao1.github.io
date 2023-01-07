@@ -1,0 +1,48 @@
+$primary: #c792ea;
+$primary-light: #ddbdf2;
+$primary-dark: #7e57c2;
+
+$secondary: #82b1ff;
+$secondary-light: #b4d0ff;
+$secondary-dark: #4e6a99;
+
+$accent: #ffcb6b;
+$accent-light: #ffdfa6;
+$accent-dark: #997940;
+
+$background-color: #292d3e;
+
+$white: #ffffff;
+$black: #000000;
+
+$gray-100: #e5e5e5;
+$gray-200: #cccccc;
+$gray-300: #b2b2b2;
+$gray-400: #999999;
+$gray-500: #7f7f7f;
+$gray-600: #666666;
+$gray-700: #4c4c4c;
+$gray-800: #333333;
+$gray-900: #191919;
+
+$grays: (
+  '100': $gray-100,
+  '200': $gray-200,
+  '300': $gray-300,
+  '400': $gray-400,
+  '500': $gray-500,
+  '600': $gray-600,
+  '700': $gray-700,
+  '800': $gray-800,
+  '900': $gray-900,
+);
+
+$text-xxsmall: 0.7rem;
+$text-xsmall: 0.8rem;
+$text-small: 0.9rem;
+$text-mid: 1rem;
+$text-large: 1.25rem;
+$text-xlarge: 1.5rem;
+$text-xxlarge: 1.75rem;
+
+$code-background: #222432;

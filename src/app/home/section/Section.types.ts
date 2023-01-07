@@ -1,6 +1,6 @@
-import type { ReactElement } from 'react';
+import type { ReactNode } from 'react';
 
 export interface SectionProps {
   title: string;
-  children?: ReactElement | ReactElement[];
+  children?: ReactNode | ReactNode[];
 }

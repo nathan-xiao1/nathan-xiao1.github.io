@@ -1,5 +1,3 @@
-import hbhsLogo from '@assets/images/hbhs-logo-bg.png';
-import unswLogo from '@assets/images/unsw-logo-bg.png';
 import React from 'react';
 import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { Section } from '../section';
@@ -13,7 +11,6 @@ function Education(): JSX.Element {
     <Section title="Education">
       <Timeline>
         <EducationTimelineItem
-          image={unswLogo}
           schoolText="University of New South Wales"
           degreeText="Bachelor of Engineering (Honours) (Software)"
           degreeTooltip="Academic statement available upon request"
@@ -21,7 +18,6 @@ function Education(): JSX.Element {
           datesText="2018 - 2021"
         ></EducationTimelineItem>
         <EducationTimelineItem
-          image={hbhsLogo}
           schoolText="Homebush Boys High School"
           degreeText="Higher School Certificate"
           gradeText="95.40 ATAR"
@@ -33,7 +29,6 @@ function Education(): JSX.Element {
 }
 
 function EducationTimelineItem({
-  image,
   schoolText,
   degreeText,
   degreeTooltip,
@@ -41,27 +36,27 @@ function EducationTimelineItem({
   datesText,
 }: EducationTimelineItemProps): JSX.Element {
   // Wrap with OverlayTrigger if tooltip is defined
+  const gradeTextElement = (
+    <p className="text-secondary text-small">{gradeText}</p>
+  );
   const gradeElement = degreeTooltip ? (
     <OverlayTrigger
       placement="left"
       overlay={<Tooltip>{degreeTooltip}</Tooltip>}
     >
-      <p>{gradeText}</p>
+      {gradeTextElement}
     </OverlayTrigger>
   ) : (
-    <p>{gradeText}</p>
+    gradeTextElement
   );
 
   return (
     <TimelineItem>
-      <div className="timeline-item-image">
-        <img src={image} />
-      </div>
       <div className="timeline-item-content">
-        <p className="text-secondary">{schoolText}</p>
-        <p className="fs-5">{degreeText}</p>
+        <p className="text-primary text-small">{schoolText}</p>
+        <p className="text-mid">{degreeText}</p>
         {gradeElement}
-        <p className="text-secondary small">{datesText}</p>
+        <p className="text-gray-300 text-xsmall">{datesText}</p>
       </div>
     </TimelineItem>
   );

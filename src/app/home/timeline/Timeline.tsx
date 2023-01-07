@@ -1,6 +1,8 @@
 import React from 'react';
 import type { TimelineProps } from './Timeline.types';
 
+import './Timeline.scss';
+
 function TimelineItem({ children }: TimelineProps): JSX.Element {
   return (
     <li className="timeline-item">

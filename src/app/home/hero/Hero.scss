@@ -1,5 +1,32 @@
 .hero {
-  &-container-main {
-    height: 100vh;
+  &-container {
+    height: 50vh;
+  }
+
+  &-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  &-subtitle {
+    font-size: 1.25rem;
+  }
+
+  &-content {
+    &-container {
+      height: 100%;
+      width: 100%;
+    }
+    &-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    &-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 }

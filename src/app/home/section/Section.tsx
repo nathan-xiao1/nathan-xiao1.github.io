@@ -6,7 +6,7 @@ import './Section.scss';
 function Section({ title, children }: SectionProps): JSX.Element {
   return (
     <div className="section-container">
-      <h1 className="section-title">{title}</h1>
+      <p className="section-title text-primary">{title}</p>
       <div className="section-content">{children}</div>
     </div>
   );
