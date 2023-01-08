@@ -35,7 +35,7 @@ export function ExperienceTimelineItem({
   return (
     <TimelineItem>
       <div className="timeline-item-content">
-        <p className="text-primary text-small">{companyText}</p>
+        <p className="text-primary text-mid">{companyText}</p>
         <p className="text-mid">{positionText}</p>
         <p className="text-secondary text-small">{employmentTypeText}</p>
         <p className="text-gray-300 text-xsmall">{datesText}</p>

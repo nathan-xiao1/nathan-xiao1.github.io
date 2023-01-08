@@ -1,8 +1,10 @@
 import React from 'react';
-import { createBrowserRouter } from 'react-router-dom';
+// TODO: Use createBrowserRouter when self-hosting
+// import { createBrowserRouter as createRouter } from 'react-router-dom';
+import { createHashRouter as createRouter } from 'react-router-dom';
 import Home from './home/Home';
 
-export default createBrowserRouter([
+export default createRouter([
   {
     path: '',
     element: <Home />,

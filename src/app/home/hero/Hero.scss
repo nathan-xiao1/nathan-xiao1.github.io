@@ -1,6 +1,10 @@
+// @use '@styles/bootstrap';
+
 .hero {
   &-container {
-    height: 50vh;
+    // @media (max-width: map-get(bootstrap.$grid-breakpoints, 'lg')) {
+    //   margin-bottom: 3rem;
+    // }
   }
 
   &-title {
@@ -11,22 +15,5 @@
 
   &-subtitle {
     font-size: 1.25rem;
-  }
-
-  &-content {
-    &-container {
-      height: 100%;
-      width: 100%;
-    }
-    &-left {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    &-right {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
   }
 }

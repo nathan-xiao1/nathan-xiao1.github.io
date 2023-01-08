@@ -1,0 +1,31 @@
+@use '@styles/variables' as *;
+
+.button {
+  color: $white;
+  border-width: 0;
+  padding: 0.25rem 1.25rem;
+
+  &-primary {
+    background-color: rgba($primary, 0.8);
+  }
+
+  &-secondary {
+    background-color: rgba($secondary, 0.8);
+  }
+
+  &-outline {
+    border-width: 2px;
+    border-style: solid;
+    background-color: transparent;
+
+    &-primary {
+      color: $primary;
+      border-color: rgba($primary, 0.8);
+    }
+
+    &-secondary {
+      color: $secondary;
+      border-color: rgba($secondary, 0.8);
+    }
+  }
+}

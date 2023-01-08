@@ -1,0 +1,47 @@
+@use '@styles/variables' as *;
+
+.aboutme {
+  &-codeblock {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem 1.5rem;
+    background-color: $code-background;
+    border-radius: 2px;
+  }
+
+  &-output {
+    &-container {
+      display: flex;
+      flex-direction: row;
+      column-gap: 12px;
+    }
+    &-controls {
+      flex-grow: 0;
+
+      display: flex;
+      flex-direction: column;
+      row-gap: 16px;
+    }
+    &-area {
+      flex-grow: 1;
+
+      display: flex;
+      align-items: center;
+
+      height: 120px;
+      overflow-y: hidden;
+      padding: 0.5rem 0.75rem;
+      font-size: 0.8rem;
+      background-color: lighten($color: $code-background, $amount: 10);
+
+      border-radius: 2px;
+
+      &-spinner {
+        flex-grow: 1;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}

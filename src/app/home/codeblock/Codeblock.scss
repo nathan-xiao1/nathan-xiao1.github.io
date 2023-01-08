@@ -5,18 +5,25 @@
     display: flex;
     flex-direction: column;
 
-    padding: 1.5rem 1.5rem;
-
-    background-color: $code-background;
-    border-radius: 8px;
-
-    font-size: 1rem;
-
     pre {
       margin: 0;
+
       code {
         font-size: 1rem;
       }
+    }
+  }
+
+  &-line-number {
+    float: left;
+    margin: 2px 1em 0 -1em;
+    border-right: 1px solid;
+    font-size: 1rem;
+    color: $gray-400;
+
+    span {
+      display: block;
+      padding: 0 0.5em 0 1em;
     }
   }
 

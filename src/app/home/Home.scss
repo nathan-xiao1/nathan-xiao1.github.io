@@ -1,0 +1,13 @@
+.home {
+  &-hero {
+    min-height: 50vh;
+
+    &-subsection {
+      padding: 0;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}

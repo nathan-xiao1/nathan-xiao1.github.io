@@ -53,7 +53,7 @@ function EducationTimelineItem({
   return (
     <TimelineItem>
       <div className="timeline-item-content">
-        <p className="text-primary text-small">{schoolText}</p>
+        <p className="text-primary text-mid">{schoolText}</p>
         <p className="text-mid">{degreeText}</p>
         {gradeElement}
         <p className="text-gray-300 text-xsmall">{datesText}</p>

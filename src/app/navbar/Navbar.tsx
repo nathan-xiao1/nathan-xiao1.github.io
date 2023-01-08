@@ -1,20 +1,22 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 
+import './Navbar.scss';
+
 function _Navbar(): JSX.Element {
   return (
-    <Navbar expand="lg" className="text-light">
+    <Navbar expand="lg" variant="dark">
       <Container>
-        <Navbar.Brand className="text-light">Nathan Xiao</Navbar.Brand>
-        <Navbar.Toggle />
-        <Navbar.Collapse className="justify-content-end">
+        <Navbar.Brand className="text-light">
+          <span className="navbar-brand">Nathan Xiao</span>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
           <Nav>
-            <Nav.Link className="text-light" href="#link">
+            <Nav.Link href="https://www.linkedin.com/in/nathan-xiao/">
               LinkedIn
             </Nav.Link>
-            <Nav.Link className="text-light" href="#home">
-              GitHub
-            </Nav.Link>
+            <Nav.Link href="https://github.com/nathan-xiao1">GitHub</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
