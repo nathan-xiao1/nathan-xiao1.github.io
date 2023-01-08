@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 
-function NXNavbar(): JSX.Element {
+function _Navbar(): JSX.Element {
   return (
     <Navbar expand="lg" className="text-light">
       <Container>
@@ -22,4 +22,4 @@ function NXNavbar(): JSX.Element {
   );
 }
 
-export { NXNavbar as Navbar };
+export { _Navbar as Navbar };

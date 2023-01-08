@@ -6,7 +6,7 @@ import type { EducationTimelineItemProps } from './Education.types';
 
 import './Education.scss';
 
-function Education(): JSX.Element {
+export function Education(): JSX.Element {
   return (
     <Section title="Education">
       <Timeline>
@@ -61,5 +61,3 @@ function EducationTimelineItem({
     </TimelineItem>
   );
 }
-
-export { Education };

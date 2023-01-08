@@ -3,7 +3,7 @@ import type { TimelineProps } from './Timeline.types';
 
 import './Timeline.scss';
 
-function TimelineItem({ children }: TimelineProps): JSX.Element {
+export function TimelineItem({ children }: TimelineProps): JSX.Element {
   return (
     <li className="timeline-item">
       <span className="timeline-item-bullet"></span>
@@ -12,12 +12,10 @@ function TimelineItem({ children }: TimelineProps): JSX.Element {
   );
 }
 
-function Timeline({ children }: TimelineProps): JSX.Element {
+export function Timeline({ children }: TimelineProps): JSX.Element {
   return (
     <div className="timeline">
       <ul>{children}</ul>
     </div>
   );
 }
-
-export { Timeline, TimelineItem };

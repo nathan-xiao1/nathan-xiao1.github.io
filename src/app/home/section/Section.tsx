@@ -3,7 +3,7 @@ import type { SectionProps } from './Section.types';
 
 import './Section.scss';
 
-function Section({ title, children }: SectionProps): JSX.Element {
+export function Section({ title, children }: SectionProps): JSX.Element {
   return (
     <div className="section-container">
       <p className="section-title text-primary">{title}</p>
@@ -11,5 +11,3 @@ function Section({ title, children }: SectionProps): JSX.Element {
     </div>
   );
 }
-
-export { Section };

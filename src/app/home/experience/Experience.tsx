@@ -5,7 +5,7 @@ import type { ExperienceTimelineItemProps } from './Experience.types';
 
 import './Experience.scss';
 
-function Experience(): JSX.Element {
+export function Experience(): JSX.Element {
   return (
     <Section title="Experience">
       <Timeline>
@@ -26,7 +26,7 @@ function Experience(): JSX.Element {
   );
 }
 
-function ExperienceTimelineItem({
+export function ExperienceTimelineItem({
   companyText,
   positionText,
   employmentTypeText,
@@ -43,5 +43,3 @@ function ExperienceTimelineItem({
     </TimelineItem>
   );
 }
-
-export { Experience };

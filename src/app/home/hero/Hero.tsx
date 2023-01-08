@@ -1,10 +1,10 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { CodeBlock } from '../codeblock';
+import { AboutMe } from '../aboutme';
 
 import './Hero.scss';
 
-function Hero(): JSX.Element {
+export function Hero(): JSX.Element {
   return (
     <Container fluid className="hero-container">
       <Row className="hero-content-container">
@@ -18,20 +18,9 @@ function Hero(): JSX.Element {
         </Col>
         <Col className="hero-content-right" lg={true}>
           <p className="heading-text text-primary">About Me</p>
-          <CodeBlock>
-            {`
-              {
-                // Test
-                location: "Sydney, New South Wales, Australia",
-                email: "XDN2369@hotmail.com",
-                phone: "+61 481 318 138",
-              }
-            `}
-          </CodeBlock>
+          <AboutMe />
         </Col>
       </Row>
     </Container>
   );
 }
-
-export { Hero };
