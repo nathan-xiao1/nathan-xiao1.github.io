@@ -12,8 +12,8 @@ export function AboutMe(): JSX.Element {
   const code = `
     const aboutMe = {
       location: 'Sydney, New South Wales, Australia',
-      email: 'XDN2369' + '@' + 'hotmail.com',
-      phone: '+61' + '481' + '318' + '138',
+      email: '_______' + '@' + 'hotmail.com',
+      phone: '+61' + '___' + '318' + '138',
     };
 
     console.log(aboutMe);
