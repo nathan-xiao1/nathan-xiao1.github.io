@@ -8,30 +8,28 @@ import './Home.scss';
 
 function Home(): JSX.Element {
   return (
-    <React.Fragment>
-      <Container fluid>
-        <Row className="g-5">
-          <Col lg={12}>
-            <Container fluid>
-              <Row>
-                <Col className="home-hero home-hero-subsection" lg={6}>
-                  <Hero />
-                </Col>
-                <Col className="home-hero-subsection" lg={6}>
-                  <AboutMe />
-                </Col>
-              </Row>
-            </Container>
-          </Col>
-          <Col lg={6}>
-            <Education />
-          </Col>
-          <Col lg={6}>
-            <Experience />
-          </Col>
-        </Row>
-      </Container>
-    </React.Fragment>
+    <Container fluid className="home-container">
+      <Row className="g-5">
+        <Col lg={12}>
+          <Container fluid>
+            <Row>
+              <Col className="home-hero home-hero-subsection" lg={6}>
+                <Hero />
+              </Col>
+              <Col className="home-hero-subsection" lg={6}>
+                <AboutMe />
+              </Col>
+            </Row>
+          </Container>
+        </Col>
+        <Col lg={6}>
+          <Education />
+        </Col>
+        <Col lg={6}>
+          <Experience />
+        </Col>
+      </Row>
+    </Container>
   );
 }
 

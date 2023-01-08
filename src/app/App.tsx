@@ -10,7 +10,7 @@ function App(): JSX.Element {
   return (
     <React.Fragment>
       <Navbar />
-      <Container className="main-container">
+      <Container className="app-container">
         <RouterProvider router={router} />
       </Container>
     </React.Fragment>

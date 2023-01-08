@@ -41,7 +41,7 @@ function EducationTimelineItem({
   );
   const gradeElement = degreeTooltip ? (
     <OverlayTrigger
-      placement="left"
+      placement="top"
       overlay={<Tooltip>{degreeTooltip}</Tooltip>}
     >
       {gradeTextElement}

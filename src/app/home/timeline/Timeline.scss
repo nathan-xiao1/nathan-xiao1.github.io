@@ -25,6 +25,7 @@ $timeline-color: $secondary;
     &-container {
       display: flex;
       flex-direction: row;
+      align-items: flex-start;
     }
 
     &-image {

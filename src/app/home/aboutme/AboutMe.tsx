@@ -13,7 +13,7 @@ export function AboutMe(): JSX.Element {
     const aboutMe = {
       location: 'Sydney, New South Wales, Australia',
       email: '_______' + '@' + 'hotmail.com',
-      phone: '+61' + '___' + '318' + '138',
+      phone: '+61' + '___' + '___' + '___',
     };
 
     console.log(aboutMe);
