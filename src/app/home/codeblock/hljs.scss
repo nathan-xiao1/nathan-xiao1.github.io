@@ -1,9 +1,8 @@
-@use '../../../styles/variables' as *;
+@use '@styles/variables' as *;
 
 pre code.hljs {
   display: block;
   overflow-x: auto;
-  padding: 1em;
 }
 
 code.hljs {
