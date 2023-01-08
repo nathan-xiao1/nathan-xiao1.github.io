@@ -2,6 +2,7 @@
   "name": "nathan-xiao1.github.io-v2-react",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://nathan-xiao1.github.io",
   "dependencies": {
     "@popperjs/core": "^2.11.6",
     "@testing-library/jest-dom": "^5.16.5",
@@ -25,6 +26,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
@@ -62,6 +65,7 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-unused-imports": "^2.0.0",
+    "gh-pages": "^4.0.0",
     "husky": "^8.0.2",
     "prettier": "^2.8.1",
     "typescript": "^4.9.4"
