@@ -13,10 +13,15 @@ function _Navbar(): JSX.Element {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
           <Nav>
-            <Nav.Link href="https://www.linkedin.com/in/nathan-xiao/">
+            <Nav.Link
+              href="https://www.linkedin.com/in/nathan-xiao/"
+              target="_blank"
+            >
               LinkedIn
             </Nav.Link>
-            <Nav.Link href="https://github.com/nathan-xiao1">GitHub</Nav.Link>
+            <Nav.Link href="https://github.com/nathan-xiao1" target="_blank">
+              GitHub
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

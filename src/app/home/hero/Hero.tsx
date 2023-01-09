@@ -7,7 +7,7 @@ export function Hero(): JSX.Element {
     <div>
       <h1 className="hero-title text-primary text-xxlarge">Welcome</h1>
       <p className="hero-subtitle text-mid">
-        {"Hello, I'm a Sydney based Software Engineer"}
+        {"Hello, I'm a Sydney-based Software Engineer"}
       </p>
     </div>
   );
