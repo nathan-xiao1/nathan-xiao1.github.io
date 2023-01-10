@@ -1,6 +1,10 @@
 @use 'variables' as *;
 @import 'bootstrap';
 
+$font-family: 'Roboto Mono', 'Montserrat', -apple-system, BlinkMacSystemFont,
+  'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+  'Droid Sans', 'Helvetica Neue', sans-serif;
+
 /**
  * Text colour
  */

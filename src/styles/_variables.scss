@@ -1,3 +1,5 @@
+@use 'bootstrap' as bs;
+
 $primary: #c792ea;
 $primary-light: #ddbdf2;
 $primary-dark: #7e57c2;
@@ -36,6 +38,14 @@ $grays: (
   '800': $gray-800,
   '900': $gray-900,
 );
+
+$breakpoints: bs.$grid-breakpoints;
+$breakpoint-xs: map-get($breakpoints, xs);
+$breakpoint-sm: map-get($breakpoints, sm);
+$breakpoint-md: map-get($breakpoints, md);
+$breakpoint-lg: map-get($breakpoints, lg);
+$breakpoint-xl: map-get($breakpoints, xl);
+$breakpoint-xxl: map-get($breakpoints, xxl);
 
 $text-xxsmall: 0.7rem;
 $text-xsmall: 0.8rem;

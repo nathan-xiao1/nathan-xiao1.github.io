@@ -25,7 +25,6 @@ $timeline-color: $secondary;
     &-container {
       display: flex;
       flex-direction: row;
-      align-items: flex-start;
     }
 
     &-image {
@@ -48,6 +47,7 @@ $timeline-color: $secondary;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: flex-start;
       margin-left: 1.5rem;
     }
   }

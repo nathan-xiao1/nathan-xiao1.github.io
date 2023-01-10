@@ -1,0 +1,44 @@
+@use 'variables' as *;
+
+/**
+ * Override cursor style
+ */
+@media only screen and (min-width: $breakpoint-lg) {
+  // Width
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  // Track
+  ::-webkit-scrollbar-track {
+    background: $code-background;
+  }
+
+  // Handle
+  ::-webkit-scrollbar-thumb {
+    background: rgba($color: $primary-dark, $alpha: 0.3);
+  }
+
+  // Handle on hover
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba($color: $primary-dark, $alpha: 0.8);
+  }
+}
+
+/**
+ * Override Bootstrap tooltip style
+ */
+.tooltip {
+  &-inner {
+    padding: 0.3rem;
+    font-family: $font-family;
+    border: 2px $accent solid;
+    border-radius: 2px;
+    background-color: $code-background;
+  }
+
+  &-arrow::before {
+    border-top-color: $accent !important;
+  }
+}
