@@ -1,0 +1,40 @@
+name: Build and deploy
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - release
+jobs:
+  build:
+    name: Build app
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Clean install project dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-artifacts
+          path: build/
+
+  deploy:
+    name: Deploy app
+    runs-on: self-hosted
+    needs:
+      - build
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: build-artifacts
