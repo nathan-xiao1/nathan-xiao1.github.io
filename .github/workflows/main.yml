@@ -1,9 +1,16 @@
 name: Build and deploy
 on:
   workflow_dispatch:
+    inputs: 
+      domain:
+        description: The name of the nginx domain
+        required: true
+        default: nathanxiao.me
+        type: string
   push:
     branches:
       - release
+
 jobs:
   build:
     name: Build app
@@ -35,6 +42,15 @@ jobs:
     needs:
       - build
     steps:
-      - uses: actions/download-artifact@v3
+      - name: Download build artifacts
+        id: download
+        uses: actions/download-artifact@v3
         with:
           name: build-artifacts
+          path: build-artifacts
+
+      - name: Copy build to nginx
+        run: cp -r ${{steps.download.outputs.download-path}}/* /var/www/${{inputs.domain}}/html
+        
+      - name: Restart nginx
+        run: sudo service nginx restart
