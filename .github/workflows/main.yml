@@ -50,7 +50,7 @@ jobs:
           path: build-artifacts
 
       - name: Copy build to nginx
-        run: cp -r ${{steps.download.outputs.download-path}}/* /var/www/${{inputs.domain}}/html
+        run: cp -r ${{steps.download.outputs.download-path}}/* /var/www/${{inputs.domain || 'nathanxiao.me'}}/html
         
       - name: Restart nginx
         run: sudo service nginx restart
