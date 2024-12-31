@@ -1,6 +1,8 @@
 import { Button } from '@app/components/Button/Button';
+import clsx from 'clsx';
 import React, { useState } from 'react';
 import { Spinner } from 'react-bootstrap';
+import { getColliableClassName } from 'website-pets';
 import { CodeBlock } from '../codeblock';
 
 import './AboutMe.scss';
@@ -66,13 +68,15 @@ export function AboutMe(): JSX.Element {
 
   return (
     <div className="aboutme-container">
-      <div className="aboutme-codeblock">
+      <div className={clsx('aboutme-codeblock', getColliableClassName())}>
         <CodeBlock language="javascript" showLineNumber={true}>
           {code}
         </CodeBlock>
       </div>
       <div className="aboutme-output-container">
-        <div className="aboutme-output-controls">
+        <div
+          className={clsx('aboutme-output-controls', getColliableClassName())}
+        >
           <Button variant="primary" outline={true} onClick={runCode}>
             Run
           </Button>
@@ -80,7 +84,7 @@ export function AboutMe(): JSX.Element {
             Clear
           </Button>
         </div>
-        <div className="aboutme-output-area">
+        <div className={clsx('aboutme-output-area', getColliableClassName())}>
           {isProcessing ? (
             <div className="aboutme-output-area-spinner">
               <Spinner animation="grow" variant="primary" size="sm" />

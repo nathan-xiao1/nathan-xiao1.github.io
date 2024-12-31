@@ -1,5 +1,7 @@
+import clsx from 'clsx';
 import React from 'react';
 import { OverlayTrigger, Tooltip } from 'react-bootstrap';
+import { getColliableClassName } from 'website-pets';
 import { Section } from '../section';
 import { Timeline, TimelineItem } from '../timeline';
 import type { EducationTimelineItemProps } from './Education.types';
@@ -53,10 +55,24 @@ function EducationTimelineItem({
   return (
     <TimelineItem>
       <div className="timeline-item-content">
-        <p className="text-primary text-mid">{schoolText}</p>
-        <p className="text-mid">{degreeText}</p>
+        <p
+          className={clsx('text-primary', 'text-mid', getColliableClassName())}
+        >
+          {schoolText}
+        </p>
+        <p className={clsx('text-mid', getColliableClassName())}>
+          {degreeText}
+        </p>
         {gradeElement}
-        <p className="text-gray-300 text-xsmall">{datesText}</p>
+        <p
+          className={clsx(
+            'text-gray-300',
+            'text-xsmall',
+            getColliableClassName()
+          )}
+        >
+          {datesText}
+        </p>
       </div>
     </TimelineItem>
   );

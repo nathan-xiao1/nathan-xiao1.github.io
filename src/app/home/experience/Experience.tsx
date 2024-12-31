@@ -1,4 +1,6 @@
+import clsx from 'clsx';
 import React from 'react';
+import { getColliableClassName } from 'website-pets';
 import { Section } from '../section';
 import { Timeline, TimelineItem } from '../timeline';
 import type { ExperienceTimelineItemProps } from './Experience.types';
@@ -35,10 +37,32 @@ export function ExperienceTimelineItem({
   return (
     <TimelineItem>
       <div className="timeline-item-content">
-        <p className="text-primary text-mid">{companyText}</p>
-        <p className="text-mid">{positionText}</p>
-        <p className="text-secondary text-small">{employmentTypeText}</p>
-        <p className="text-gray-300 text-xsmall">{datesText}</p>
+        <p
+          className={clsx('text-primary', 'text-mid', getColliableClassName())}
+        >
+          {companyText}
+        </p>
+        <p className={clsx('text-mid', getColliableClassName())}>
+          {positionText}
+        </p>
+        <p
+          className={clsx(
+            'text-secondary',
+            'text-small',
+            getColliableClassName()
+          )}
+        >
+          {employmentTypeText}
+        </p>
+        <p
+          className={clsx(
+            'text-gray-300',
+            'text-xsmall',
+            getColliableClassName()
+          )}
+        >
+          {datesText}
+        </p>
       </div>
     </TimelineItem>
   );

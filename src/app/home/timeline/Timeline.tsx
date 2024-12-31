@@ -1,4 +1,6 @@
+import clsx from 'clsx';
 import React from 'react';
+import { getColliableClassName } from 'website-pets';
 import type { TimelineProps } from './Timeline.types';
 
 import './Timeline.scss';
@@ -6,7 +8,9 @@ import './Timeline.scss';
 export function TimelineItem({ children }: TimelineProps): JSX.Element {
   return (
     <li className="timeline-item">
-      <span className="timeline-item-bullet"></span>
+      <span
+        className={clsx('timeline-item-bullet', getColliableClassName())}
+      ></span>
       <div className="timeline-item-container">{children}</div>
     </li>
   );

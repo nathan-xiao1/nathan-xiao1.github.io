@@ -20,6 +20,8 @@
       display: flex;
       flex-direction: column;
       row-gap: 16px;
+
+      height: fit-content;
     }
     &-area {
       flex-grow: 1;
