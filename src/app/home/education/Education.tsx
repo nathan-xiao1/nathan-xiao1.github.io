@@ -1,5 +1,4 @@
 import clsx from 'clsx';
-import React from 'react';
 import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { getColliableClassName } from 'website-pets';
 import { Section } from '../section';

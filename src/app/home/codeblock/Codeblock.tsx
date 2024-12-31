@@ -1,7 +1,7 @@
 import hljs from 'highlight.js/lib/core';
 import javascript from 'highlight.js/lib/languages/javascript';
 import json from 'highlight.js/lib/languages/json';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import stripIndent from 'strip-indent';
 
 import './Codeblock.scss';

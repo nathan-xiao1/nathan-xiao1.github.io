@@ -1,5 +1,4 @@
 import clsx from 'clsx';
-import React from 'react';
 import { getColliableClassName } from 'website-pets';
 import type { TimelineProps } from './Timeline.types';
 

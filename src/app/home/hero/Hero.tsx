@@ -1,7 +1,6 @@
 import clsx from 'clsx';
-import React from 'react';
-
 import { getColliableClassName } from 'website-pets';
+
 import './Hero.scss';
 
 export function Hero(): JSX.Element {

@@ -1,10 +1,11 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Ninja, World } from 'website-pets';
 import { AboutMe } from './aboutme';
 import { Education } from './education';
 import { Experience } from './experience';
 import { Hero } from './hero';
+
 import './Home.scss';
 
 function Home(): JSX.Element {

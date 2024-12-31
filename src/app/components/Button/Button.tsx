@@ -1,7 +1,6 @@
 import classnames from 'classnames';
-import React from 'react';
-
 import styles from './Button.module.scss';
+import type React from 'react';
 
 export function Button({
   variant = 'primary',

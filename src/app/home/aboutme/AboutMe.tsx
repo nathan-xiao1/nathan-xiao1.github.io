@@ -1,6 +1,6 @@
 import { Button } from '@app/components/Button/Button';
 import clsx from 'clsx';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Spinner } from 'react-bootstrap';
 import { getColliableClassName } from 'website-pets';
 import { CodeBlock } from '../codeblock';
