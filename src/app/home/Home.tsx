@@ -9,11 +9,11 @@ import { Hero } from './hero';
 import './Home.scss';
 
 function Home(): JSX.Element {
-  const elementRef = useRef(null);
+  const homeContainerRef = useRef(null);
 
   useEffect(() => {
-    const current = elementRef.current;
-    if (current != null) {
+    const homeContainer = homeContainerRef.current;
+    if (homeContainer != null) {
       const ninja = new Ninja({
         left: 0,
         top: 0,
@@ -21,13 +21,14 @@ function Home(): JSX.Element {
         width: 50,
         speed: 5,
       });
-      const world = new World(ninja, current);
+      const world = new World(ninja, homeContainer);
+      world.makeEntityDraggable(ninja);
       world.start();
     }
   }, []);
 
   return (
-    <Container fluid className="home-container" ref={elementRef}>
+    <Container fluid className="home-container" ref={homeContainerRef}>
       <Row className="g-5">
         <Col lg={12}>
           <Container fluid>
