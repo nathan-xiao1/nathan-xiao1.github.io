@@ -6,6 +6,10 @@
     padding: 1.5rem 1.5rem;
     background-color: $code-background;
     border-radius: 2px;
+
+    #aboutme-sandbox {
+      display: none;
+    }
   }
 
   &-output {

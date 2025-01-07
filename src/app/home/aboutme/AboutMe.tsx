@@ -1,17 +1,13 @@
 import { Button } from '@app/components/Button/Button';
 import clsx from 'clsx';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Spinner } from 'react-bootstrap';
 import { getColliableClassName } from 'website-pets';
 import { CodeBlock } from '../codeblock';
 
 import './AboutMe.scss';
 
-export function AboutMe(): JSX.Element {
-  const [codeOutput, setCodeOutput] = useState('');
-  const [isProcessing, setIsProcessing] = useState(false);
-
-  const code = `
+const DEFAULT_CODE = `
     const aboutMe = {
       location: 'Sydney, New South Wales, Australia',
       email: 'jobs' + '@' + 'nathanxiao.me',
@@ -21,45 +17,74 @@ export function AboutMe(): JSX.Element {
     console.log(aboutMe);
   `;
 
+interface IframeMessageData {
+  type: 'iframe-sandbox-log';
+  args: unknown[];
+}
+
+export function AboutMe(): JSX.Element {
+  const [codeOutput, setCodeOutput] = useState('');
+  const [isProcessing, setIsProcessing] = useState(false);
+
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+
+  // Listen for messages from the iframe
+  useEffect(() => {
+    const onMessage = (event: MessageEvent<IframeMessageData>): void => {
+      const data = event.data;
+      if (data.type === 'iframe-sandbox-log') {
+        const logMessage = data.args
+          .map((arg: unknown) => {
+            // Convert objects to strings
+            if (typeof arg === 'object') {
+              return JSON.stringify(arg, null, 2);
+            } else {
+              return arg;
+            }
+          })
+          .join(' ');
+
+        setCodeOutput(logMessage);
+        setIsProcessing(false);
+      }
+    };
+
+    window.addEventListener('message', onMessage);
+    return () => window.removeEventListener('message', onMessage);
+  }, []);
+
   const runCode = (): void => {
-    // The code to run in the Web Worker
-    const workerCode = (): void => {
+    const iframe = iframeRef.current;
+
+    if (iframe == null) {
+      return console.error('Error: Sandbox iframe not found');
+    }
+
+    // Show loading spinner
+    setIsProcessing(true);
+
+    const iframeCode = (): void => {
       // Store the original console.log
       const originalConsoleLog = console.log;
 
-      // Replace the console.log with one that return a
-      // stringified version of each arg
+      // Replace the console.log with one post the data back
+      // to the parent
       console.log = (...args): void => {
-        const formattedList = args.map((arg) => JSON.stringify(arg, null, 2));
-        const output = formattedList.join(' ');
-        postMessage(output);
+        const message: IframeMessageData = {
+          type: 'iframe-sandbox-log',
+          args: args,
+        };
+        parent.postMessage(message, '*');
         originalConsoleLog.apply(console, args);
       };
-
-      // Handle message sent to this worker
-      onmessage = (e): void => {
-        eval(e.data);
-      };
     };
 
-    // Obtain a blob URL reference to our virtual worker 'file'
-    const blob = new Blob([`(${workerCode.toString()})()`]);
-    const blobURL = URL.createObjectURL(blob);
-
-    // Create a Web Worker for running the code
-    const worker = new Worker(blobURL);
-
-    // Handle message from the worker
-    worker.onmessage = (ev): void => {
-      setIsProcessing(false);
-      setCodeOutput(ev.data);
-    };
-    // Send the code to be run on the worker
-    // FIXME: Hack to make it look like it is doing something
-    setIsProcessing(true);
-    setTimeout(() => {
-      worker.postMessage(code);
-    }, 250);
+    iframe.srcdoc = `
+      <script>
+        (${iframeCode.toString()}).call(this);
+        ${DEFAULT_CODE}
+      </script>
+    `;
   };
 
   const clearCode = (): void => {
@@ -69,8 +94,14 @@ export function AboutMe(): JSX.Element {
   return (
     <div className="aboutme-container">
       <div className={clsx('aboutme-codeblock', getColliableClassName())}>
+        <iframe
+          ref={iframeRef}
+          id="aboutme-sandbox"
+          sandbox="allow-scripts"
+          title="sandbox"
+        ></iframe>
         <CodeBlock language="javascript" showLineNumber={true}>
-          {code}
+          {DEFAULT_CODE}
         </CodeBlock>
       </div>
       <div className="aboutme-output-container">
