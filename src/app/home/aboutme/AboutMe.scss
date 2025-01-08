@@ -2,10 +2,12 @@
 
 .aboutme {
   &-codeblock {
+    height: 220px;
+    overflow: auto;
     margin-bottom: 1.5rem;
-    padding: 1.5rem 1.5rem;
     background-color: $code-background;
     border-radius: 2px;
+    border: 1px solid $gray-600;
 
     #aboutme-sandbox {
       display: none;
@@ -14,39 +16,34 @@
 
   &-output {
     &-container {
+      column-gap: 12px;
       display: flex;
       flex-direction: row;
-      column-gap: 12px;
     }
-    &-controls {
-      flex-grow: 0;
 
+    &-controls {
       display: flex;
       flex-direction: column;
-      row-gap: 16px;
-
+      flex-grow: 0;
       height: fit-content;
+      row-gap: 16px;
     }
     &-area {
       flex-grow: 1;
-
       display: flex;
-      align-items: center;
-
       height: 120px;
-      overflow-y: hidden;
+      overflow: auto;
       padding: 0.5rem 0.75rem;
       font-size: 0.8rem;
       background-color: lighten($color: $code-background, $amount: 10);
-
       border-radius: 2px;
 
       &-spinner {
-        flex-grow: 1;
-
-        display: flex;
-        justify-content: center;
         align-items: center;
+        align-self: center;
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
       }
     }
   }

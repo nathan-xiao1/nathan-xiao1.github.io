@@ -1,29 +1,27 @@
 @use '@styles/variables' as *;
 
 .codeblock {
-  &-container {
-    display: flex;
-    flex-direction: column;
+  &-editor {
+    counter-reset: line;
 
-    pre {
-      margin: 0;
-
-      code {
-        font-size: 1rem;
+    &.line-numbers {
+      #codeblock-editor-textarea {
+        outline: none;
+        padding-left: 60px !important;
       }
-    }
-  }
 
-  &-line-number {
-    float: left;
-    margin: 2px 1em 0 -1em;
-    border-right: 1px solid;
-    font-size: 1rem;
-    color: $gray-400;
+      pre {
+        padding-left: 60px !important;
+      }
 
-    span {
-      display: block;
-      padding: 0 0.5em 0 1em;
+      .editor-line-number {
+        color: $gray-600;
+        font-weight: 100;
+        left: 0px;
+        position: absolute;
+        text-align: right;
+        width: 40px;
+      }
     }
   }
 }

@@ -2,6 +2,7 @@ import { Button } from '@app/components/Button/Button';
 import clsx from 'clsx';
 import { useEffect, useRef, useState } from 'react';
 import { Spinner } from 'react-bootstrap';
+import stripIndent from 'strip-indent';
 import { getColliableClassName } from 'website-pets';
 import { CodeBlock } from '../codeblock';
 
@@ -23,6 +24,7 @@ interface IframeMessageData {
 }
 
 export function AboutMe(): JSX.Element {
+  const [code, setCode] = useState(stripIndent(DEFAULT_CODE).trim());
   const [codeOutput, setCodeOutput] = useState('');
   const [isProcessing, setIsProcessing] = useState(false);
 
@@ -44,8 +46,12 @@ export function AboutMe(): JSX.Element {
           })
           .join(' ');
 
-        setCodeOutput(logMessage);
-        setIsProcessing(false);
+        // FIXME: Hack to make it look like the code is running for a bit,
+        // otherwise, it seems a bit too fast/fake
+        setTimeout(() => {
+          setCodeOutput(logMessage);
+          setIsProcessing(false);
+        }, 250);
       }
     };
 
@@ -82,7 +88,7 @@ export function AboutMe(): JSX.Element {
     iframe.srcdoc = `
       <script>
         (${iframeCode.toString()}).call(this);
-        ${DEFAULT_CODE}
+        ${code}
       </script>
     `;
   };
@@ -100,9 +106,13 @@ export function AboutMe(): JSX.Element {
           sandbox="allow-scripts"
           title="sandbox"
         ></iframe>
-        <CodeBlock language="javascript" showLineNumber={true}>
-          {DEFAULT_CODE}
-        </CodeBlock>
+        <CodeBlock
+          code={code}
+          onCodeChange={setCode}
+          language="javascript"
+          showLineNumber={true}
+          padding={24}
+        />
       </div>
       <div className="aboutme-output-container">
         <div
@@ -121,9 +131,14 @@ export function AboutMe(): JSX.Element {
               <Spinner animation="grow" variant="primary" size="sm" />
             </div>
           ) : (
-            <CodeBlock language="json" fontSize="0.85rem">
-              {codeOutput}
-            </CodeBlock>
+            <div className="aboutme-output-area-code">
+              <CodeBlock
+                code={codeOutput}
+                disabled={true}
+                language="json"
+                padding={2}
+              />
+            </div>
           )}
         </div>
       </div>

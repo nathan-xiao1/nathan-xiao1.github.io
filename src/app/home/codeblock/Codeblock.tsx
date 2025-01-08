@@ -1,58 +1,63 @@
-import hljs from 'highlight.js/lib/core';
-import javascript from 'highlight.js/lib/languages/javascript';
-import json from 'highlight.js/lib/languages/json';
-import { useEffect } from 'react';
-import stripIndent from 'strip-indent';
+import clsx from 'clsx';
+import { highlight, languages } from 'prismjs';
+import Editor from 'react-simple-code-editor';
+import type { Grammar } from 'prismjs';
 
+import 'prismjs/components/prism-javascript';
+import 'prismjs/components/prism-json';
+import 'prism-themes/themes/prism-one-dark.css';
 import './Codeblock.scss';
-import './hljs.scss';
 
 export function CodeBlock({
+  code,
+  onCodeChange = (): void => {
+    /* no-op */
+  },
   language = 'javascript',
   showLineNumber = false,
-  fontSize,
-  children,
+  disabled = false,
+  padding = 10,
+  fontSize = 14,
 }: {
+  code: string;
+  onCodeChange?: (code: string) => void;
   language?: 'javascript' | 'json';
   showLineNumber?: boolean;
-  fontSize?: string;
-  children: string;
+  disabled?: boolean;
+  padding?: number;
+  fontSize?: number;
 }): JSX.Element {
-  useEffect(() => {
-    // Register lanaguage on component init
-    hljs.registerLanguage(
-      language,
-      language == 'javascript' ? javascript : json
-    );
-  }, [language]);
-
-  useEffect(() => {
-    // Highlight when child changes
-    hljs.highlightAll();
-  }, [children]);
-
-  const formattedCode = stripIndent(children).trim();
-  const lineCount = formattedCode.split(/\r\n|\r|\n/).length;
-
-  const lineNumberSpan = [...Array(lineCount)].map((_, idx) => (
-    <span key={idx}>{idx + 1}</span>
-  ));
+  const highlightCode = (code: string): string => {
+    const grammar = language === 'json' ? languages.json : languages.js;
+    return showLineNumber
+      ? hightlightWithLineNumbers(code, grammar, language)
+      : highlight(code, grammar, language);
+  };
 
   return (
-    <div className="codeblock-container">
-      <pre>
-        {showLineNumber && (
-          <span className="codeblock-line-number">{lineNumberSpan}</span>
-        )}
-        <code
-          className="language-javascript"
-          style={{
-            fontSize,
-          }}
-        >
-          {formattedCode}
-        </code>
-      </pre>
-    </div>
+    <Editor
+      value={code}
+      onValueChange={onCodeChange}
+      highlight={highlightCode}
+      disabled={disabled}
+      textareaId="codeblock-editor-textarea"
+      className={clsx('codeblock-editor', { 'line-numbers': showLineNumber })}
+      padding={padding}
+      style={{
+        fontFamily: '"Fira code", "Fira Mono", monospace',
+        fontSize: fontSize,
+      }}
+    />
   );
+}
+
+function hightlightWithLineNumbers(
+  text: string,
+  grammar: Grammar,
+  language: string
+): string {
+  return highlight(text, grammar, language)
+    .split('\n')
+    .map((line, i) => `<span class='editor-line-number'>${i + 1}</span>${line}`)
+    .join('\n');
 }
