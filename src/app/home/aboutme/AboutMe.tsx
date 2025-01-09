@@ -4,27 +4,17 @@ import { useEffect, useRef, useState } from 'react';
 import { Spinner } from 'react-bootstrap';
 import stripIndent from 'strip-indent';
 import { getColliableClassName } from 'website-pets';
+import { getDefaultScript } from './utils/default-code';
 import { CodeBlock } from '../codeblock';
 
 import './AboutMe.scss';
-
-const DEFAULT_CODE = `
-    const aboutMe = {
-      location: 'Sydney, New South Wales, Australia',
-      email: 'jobs' + '@' + 'nathanxiao.me',
-      phone: '+61' + '___' + '___' + '___',
-    };
-
-    console.log(aboutMe);
-  `;
-
 interface IframeMessageData {
   type: 'iframe-sandbox-log';
   args: unknown[];
 }
 
 export function AboutMe(): JSX.Element {
-  const [code, setCode] = useState(stripIndent(DEFAULT_CODE).trim());
+  const [code, setCode] = useState(stripIndent(getDefaultScript()).trim());
   const [codeOutput, setCodeOutput] = useState('');
   const [isProcessing, setIsProcessing] = useState(false);
 
