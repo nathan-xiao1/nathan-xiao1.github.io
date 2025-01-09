@@ -5,45 +5,39 @@ import { Spinner } from 'react-bootstrap';
 import stripIndent from 'strip-indent';
 import { getColliableClassName } from 'website-pets';
 import { getDefaultScript } from './utils/default-code';
+import { IframeHandler } from './utils/iframe-handler';
 import { CodeBlock } from '../codeblock';
 
 import './AboutMe.scss';
-interface IframeMessageData {
-  type: 'iframe-sandbox-log';
-  args: unknown[];
-}
 
 export function AboutMe(): JSX.Element {
-  const [code, setCode] = useState(stripIndent(getDefaultScript()).trim());
+  const [code, setCode] = useState(stripIndent(getDefaultScript()));
   const [codeOutput, setCodeOutput] = useState('');
   const [isProcessing, setIsProcessing] = useState(false);
+
+  const codeOutputs = useRef<string[]>([]);
+
+  const iframeHandler = new IframeHandler({
+    onLog(logMessage: string): void {
+      // Append to the code outputs
+      codeOutputs.current = [...codeOutputs.current, logMessage];
+    },
+    onEnd(): void {
+      // Hide loading spinner and display the code output
+      setCodeOutput(codeOutputs.current.join('\n'));
+      setIsProcessing(false);
+    },
+    onError(error: Error): void {
+      // Append to the code output
+      codeOutputs.current = [...codeOutputs.current, error.toString()];
+    },
+  });
 
   const iframeRef = useRef<HTMLIFrameElement>(null);
 
   // Listen for messages from the iframe
   useEffect(() => {
-    const onMessage = (event: MessageEvent<IframeMessageData>): void => {
-      const data = event.data;
-      if (data.type === 'iframe-sandbox-log') {
-        const logMessage = data.args
-          .map((arg: unknown) => {
-            // Convert objects to strings
-            if (typeof arg === 'object') {
-              return JSON.stringify(arg, null, 2);
-            } else {
-              return arg;
-            }
-          })
-          .join(' ');
-
-        // FIXME: Hack to make it look like the code is running for a bit,
-        // otherwise, it seems a bit too fast/fake
-        setTimeout(() => {
-          setCodeOutput(logMessage);
-          setIsProcessing(false);
-        }, 250);
-      }
-    };
+    const onMessage = iframeHandler.handleMessageEvent;
 
     window.addEventListener('message', onMessage);
     return () => window.removeEventListener('message', onMessage);
@@ -56,34 +50,16 @@ export function AboutMe(): JSX.Element {
       return console.error('Error: Sandbox iframe not found');
     }
 
+    clearCode();
+
     // Show loading spinner
     setIsProcessing(true);
 
-    const iframeCode = (): void => {
-      // Store the original console.log
-      const originalConsoleLog = console.log;
-
-      // Replace the console.log with one post the data back
-      // to the parent
-      console.log = (...args): void => {
-        const message: IframeMessageData = {
-          type: 'iframe-sandbox-log',
-          args: args,
-        };
-        parent.postMessage(message, '*');
-        originalConsoleLog.apply(console, args);
-      };
-    };
-
-    iframe.srcdoc = `
-      <script>
-        (${iframeCode.toString()}).call(this);
-        ${code}
-      </script>
-    `;
+    iframeHandler.setupIframe(iframe, code);
   };
 
   const clearCode = (): void => {
+    codeOutputs.current = [];
     setCodeOutput('');
   };
 
