@@ -2,7 +2,7 @@
 
 .aboutme {
   &-codeblock {
-    height: 350px;
+    height: 330px;
     overflow: auto;
     margin-bottom: 1.5rem;
     background-color: $code-background;
@@ -35,7 +35,7 @@
       overflow: auto;
       padding: 0.5rem 0.75rem;
       font-size: 0.8rem;
-      background-color: lighten($color: $code-background, $amount: 10);
+      background-color: lighten($color: $code-background, $amount: 7);
       border-radius: 2px;
 
       &-spinner {
