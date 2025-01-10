@@ -30,6 +30,10 @@ export function AboutMe(): JSX.Element {
     onError(error: Error): void {
       // Append to the code output
       codeOutputs.current = [...codeOutputs.current, error.toString()];
+
+      // Hide loading spinner and display the code output
+      setCodeOutput(codeOutputs.current.join('\n'));
+      setIsProcessing(false);
     },
   });
 

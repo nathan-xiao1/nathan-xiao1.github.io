@@ -1,3 +1,5 @@
+import escapeStringRegexp from 'escape-string-regexp';
+
 type IframeMessage = IframeLogMessage | IframeEndMessage | IframeErrorMessage;
 
 interface IframeLogMessage {
@@ -31,10 +33,12 @@ export class IframeHandler {
     const iframeSetupCode = this.getIframeSetupCode();
     const iframeTeardownCode = this.getIframeTeardownCode();
 
+    const escapedIframeCode = escapeStringRegexp(iframeCode);
+
     const srcdoc = `
       <script>
         (${iframeSetupCode.toString()})();
-        eval(\`${iframeCode}\`);
+        eval(\`${escapedIframeCode}\`);
         (${iframeTeardownCode.toString()})();
       </script>
     `;
