@@ -1,6 +1,7 @@
 import stripIndent from 'strip-indent';
 
 const randomWords = [
+  ' ',
   ',',
   '.',
   '@',
@@ -25,7 +26,19 @@ const randomWords = [
 ];
 
 const EMAIL = ['jobs', '@', 'nathanxiao', '.', 'me'];
-const LOCATION = ['Sydney', ',', 'New', 'South', 'Wales', ',', 'Australia'];
+const LOCATION = [
+  'Sydney',
+  ',',
+  ' ',
+  'New',
+  ' ',
+  'South',
+  ' ',
+  'Wales',
+  ',',
+  ' ',
+  'Australia',
+];
 
 function findIndex<T>(wordsArray: T[], targetWordsArray: T[]): number[] {
   return targetWordsArray.map((target) => wordsArray.indexOf(target));
