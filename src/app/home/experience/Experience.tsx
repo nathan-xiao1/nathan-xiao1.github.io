@@ -11,17 +11,23 @@ export function Experience(): JSX.Element {
     <Section title="Experience">
       <Timeline>
         <ExperienceTimelineItem
+          companyText="TikTok"
+          positionText="Software Engineer"
+          employmentTypeText="Full-time"
+          datesText="Oct 2023 - Present"
+        />
+        <ExperienceTimelineItem
           companyText="Freelancer.com"
           positionText="Software Engineer"
           employmentTypeText="Full-time"
-          datesText="Mar 2022 - Present"
-        ></ExperienceTimelineItem>
+          datesText="Mar 2022 - Oct 2023"
+        />
         <ExperienceTimelineItem
           companyText="Freelancer.com"
           positionText="Software Engineer"
           employmentTypeText="Internship"
           datesText="Dec 2021 - Mar 2022"
-        ></ExperienceTimelineItem>
+        />
       </Timeline>
     </Section>
   );
