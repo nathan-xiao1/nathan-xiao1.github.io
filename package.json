@@ -31,7 +31,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build --cname nathanxiao.me",
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
